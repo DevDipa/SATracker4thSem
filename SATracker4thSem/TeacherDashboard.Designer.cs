@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPrintRecord = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.btnUpdateStudent = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
@@ -44,7 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,7 +56,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnPrintRecord);
             this.panel1.Controls.Add(this.btnDeleteStudent);
             this.panel1.Controls.Add(this.btnUpdateStudent);
             this.panel1.Controls.Add(this.btnAddStudent);
@@ -69,6 +67,21 @@
             this.panel1.Size = new System.Drawing.Size(362, 839);
             this.panel1.TabIndex = 0;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.Location = new System.Drawing.Point(12, 500);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(332, 56);
+            this.btnLogOut.TabIndex = 8;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -79,21 +92,6 @@
             this.label1.Size = new System.Drawing.Size(236, 38);
             this.label1.TabIndex = 7;
             this.label1.Text = "DASHBOARD";
-            // 
-            // btnPrintRecord
-            // 
-            this.btnPrintRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.btnPrintRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintRecord.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnPrintRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintRecord.Image")));
-            this.btnPrintRecord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrintRecord.Location = new System.Drawing.Point(12, 501);
-            this.btnPrintRecord.Name = "btnPrintRecord";
-            this.btnPrintRecord.Size = new System.Drawing.Size(332, 56);
-            this.btnPrintRecord.TabIndex = 6;
-            this.btnPrintRecord.Text = "Print Record";
-            this.btnPrintRecord.UseVisualStyleBackColor = false;
             // 
             // btnDeleteStudent
             // 
@@ -226,7 +224,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(465, 39);
+            this.label2.Size = new System.Drawing.Size(450, 38);
             this.label2.TabIndex = 0;
             this.label2.Text = "Student Attendance Tracker";
             // 
@@ -251,21 +249,6 @@
             this.label4.Size = new System.Drawing.Size(513, 38);
             this.label4.TabIndex = 3;
             this.label4.Text = "Connecting Code with Creativity";
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
-            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(12, 578);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(332, 56);
-            this.btnLogOut.TabIndex = 8;
-            this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = false;
             // 
             // TeacherDashboard
             // 
@@ -303,7 +286,6 @@
         private System.Windows.Forms.Button btnDeleteStudent;
         private System.Windows.Forms.Button btnUpdateStudent;
         private System.Windows.Forms.Button btnAddStudent;
-        private System.Windows.Forms.Button btnPrintRecord;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -30,29 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnViewMyAttendannce = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnViewMyAttendannce = new System.Windows.Forms.Button();
-            this.btnPrintRecord = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.panel1.Controls.Add(this.btnLogOut);
-            this.panel1.Controls.Add(this.btnPrintRecord);
             this.panel1.Controls.Add(this.btnViewMyAttendannce);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -61,6 +59,35 @@
             this.panel1.Size = new System.Drawing.Size(362, 839);
             this.panel1.TabIndex = 0;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.Location = new System.Drawing.Point(12, 193);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(332, 56);
+            this.btnLogOut.TabIndex = 9;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            // 
+            // btnViewMyAttendannce
+            // 
+            this.btnViewMyAttendannce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewMyAttendannce.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewMyAttendannce.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnViewMyAttendannce.Image = ((System.Drawing.Image)(resources.GetObject("btnViewMyAttendannce.Image")));
+            this.btnViewMyAttendannce.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewMyAttendannce.Location = new System.Drawing.Point(12, 111);
+            this.btnViewMyAttendannce.Name = "btnViewMyAttendannce";
+            this.btnViewMyAttendannce.Size = new System.Drawing.Size(332, 56);
+            this.btnViewMyAttendannce.TabIndex = 1;
+            this.btnViewMyAttendannce.Text = "View  Attendance";
+            this.btnViewMyAttendannce.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -68,7 +95,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(52, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 39);
+            this.label1.Size = new System.Drawing.Size(236, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "DASHBOARD";
             // 
@@ -84,6 +111,51 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1134, 82);
             this.panel2.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1036, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 29);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Student";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(974, 17);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(902, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(70, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(450, 38);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Student Attendance Tracker";
             // 
             // pictureBox1
             // 
@@ -102,98 +174,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label2.Location = new System.Drawing.Point(938, 662);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(533, 39);
+            this.label2.Size = new System.Drawing.Size(513, 38);
             this.label2.TabIndex = 3;
             this.label2.Text = "Connecting Code with Creativity";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(70, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(465, 39);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Student Attendance Tracker";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(902, 17);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(974, 17);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1036, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 29);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Student";
-            // 
-            // btnViewMyAttendannce
-            // 
-            this.btnViewMyAttendannce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewMyAttendannce.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewMyAttendannce.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnViewMyAttendannce.Image = ((System.Drawing.Image)(resources.GetObject("btnViewMyAttendannce.Image")));
-            this.btnViewMyAttendannce.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewMyAttendannce.Location = new System.Drawing.Point(12, 111);
-            this.btnViewMyAttendannce.Name = "btnViewMyAttendannce";
-            this.btnViewMyAttendannce.Size = new System.Drawing.Size(332, 56);
-            this.btnViewMyAttendannce.TabIndex = 1;
-            this.btnViewMyAttendannce.Text = "View  Attendance";
-            this.btnViewMyAttendannce.UseVisualStyleBackColor = true;
-            // 
-            // btnPrintRecord
-            // 
-            this.btnPrintRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.btnPrintRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintRecord.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnPrintRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintRecord.Image")));
-            this.btnPrintRecord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrintRecord.Location = new System.Drawing.Point(12, 191);
-            this.btnPrintRecord.Name = "btnPrintRecord";
-            this.btnPrintRecord.Size = new System.Drawing.Size(332, 56);
-            this.btnPrintRecord.TabIndex = 7;
-            this.btnPrintRecord.Text = "Print Record";
-            this.btnPrintRecord.UseVisualStyleBackColor = false;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
-            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(12, 268);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(332, 56);
-            this.btnLogOut.TabIndex = 9;
-            this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = false;
             // 
             // StudentDashboard
             // 
@@ -214,9 +197,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,7 +217,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnViewMyAttendannce;
-        private System.Windows.Forms.Button btnPrintRecord;
         private System.Windows.Forms.Button btnLogOut;
     }
 }
