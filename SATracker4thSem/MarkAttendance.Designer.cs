@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarkAttendance));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbBatch = new System.Windows.Forms.ComboBox();
@@ -153,9 +154,11 @@
             this.btnSaveAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveAttendance.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSaveAttendance.Location = new System.Drawing.Point(789, 694);
+            this.btnSaveAttendance.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveAttendance.Image")));
+            this.btnSaveAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveAttendance.Location = new System.Drawing.Point(753, 694);
             this.btnSaveAttendance.Name = "btnSaveAttendance";
-            this.btnSaveAttendance.Size = new System.Drawing.Size(309, 51);
+            this.btnSaveAttendance.Size = new System.Drawing.Size(366, 51);
             this.btnSaveAttendance.TabIndex = 28;
             this.btnSaveAttendance.Text = "Save Attendance";
             this.btnSaveAttendance.UseVisualStyleBackColor = false;

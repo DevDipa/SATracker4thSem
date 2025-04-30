@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSaveAttendance.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAEUSURBVEhL7ZZBagJBEEW9gd4gYFYu4kLJJXKGkIt4guwC
+        rrLJDfQkMWaVA2QVcCW4C+SFH6qhuxi1JK0IzoOCYeZXPQZmmup0LhrgCngEnivUFOh7RyPAkpJVw8Bo
+        qfczJAd+nPjVZ6Ko12bslzupCImBe3vLSXYvicVueRZMRMWSFnknFpJfl52GC4qaYiF5r+w+jViMy+4z
+        Ey98pgn7/8fAILu38MOMkHgD3PjcPoCh9TYREh+DVnxe4m/gwb7YQ+sO+PIDo+J3nzkE4MUPjIpDB8g2
+        soMlpxW34j9OKk4LnqglngEfu8Ra9hTQAVBTrJ1sbtcjn1PwzR4m/rPeqtJbJtZA13slrrnQ+3oCbr3z
+        cvgF5Zlprl0rKNYAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
