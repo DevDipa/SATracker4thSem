@@ -16,7 +16,7 @@ namespace SATracker4thSem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ViewAttendance());
+            Application.Run(new LoginForm());
         }
     }
 }

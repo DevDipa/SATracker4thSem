@@ -70,7 +70,7 @@
             // 
             this.cbBatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbBatch.FormattingEnabled = true;
             this.cbBatch.Items.AddRange(new object[] {
             "BCA - I",
@@ -156,9 +156,9 @@
             this.btnSaveAttendance.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSaveAttendance.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveAttendance.Image")));
             this.btnSaveAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveAttendance.Location = new System.Drawing.Point(753, 694);
+            this.btnSaveAttendance.Location = new System.Drawing.Point(744, 694);
             this.btnSaveAttendance.Name = "btnSaveAttendance";
-            this.btnSaveAttendance.Size = new System.Drawing.Size(366, 51);
+            this.btnSaveAttendance.Size = new System.Drawing.Size(375, 51);
             this.btnSaveAttendance.TabIndex = 28;
             this.btnSaveAttendance.Text = "Save Attendance";
             this.btnSaveAttendance.UseVisualStyleBackColor = false;
