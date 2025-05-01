@@ -12,6 +12,21 @@ namespace SATracker4thSem
 {
     public partial class TeacherDashboard : Form
     {
+        private Form activeForm = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.pnlMain.Controls.Add(childForm);  // Make sure pnlMain is the name of the panel with the logo
+            this.pnlMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
         public TeacherDashboard()
         {
             InitializeComponent();
@@ -44,9 +59,12 @@ namespace SATracker4thSem
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+            pbLogo.SendToBack();
+            lblSlogan.SendToBack();
+            OpenChildForm(new AddStudent());
 
         }
 
-        
+
     }
 }

@@ -51,7 +51,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label1.Location = new System.Drawing.Point(469, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 39);
+            this.label1.Size = new System.Drawing.Size(207, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Student";
             // 
@@ -62,7 +62,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label2.Location = new System.Drawing.Point(272, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 39);
+            this.label2.Size = new System.Drawing.Size(101, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "Batch";
             // 
@@ -73,7 +73,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label3.Location = new System.Drawing.Point(272, 216);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 39);
+            this.label3.Size = new System.Drawing.Size(165, 38);
             this.label3.TabIndex = 2;
             this.label3.Text = "Full Name";
             // 
@@ -84,7 +84,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label4.Location = new System.Drawing.Point(272, 306);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 39);
+            this.label4.Size = new System.Drawing.Size(133, 38);
             this.label4.TabIndex = 3;
             this.label4.Text = "Roll No.";
             // 
@@ -95,7 +95,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label5.Location = new System.Drawing.Point(273, 397);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 39);
+            this.label5.Size = new System.Drawing.Size(98, 38);
             this.label5.TabIndex = 4;
             this.label5.Text = "Email";
             // 
@@ -106,7 +106,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label6.Location = new System.Drawing.Point(272, 490);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 39);
+            this.label6.Size = new System.Drawing.Size(171, 38);
             this.label6.TabIndex = 5;
             this.label6.Text = "Phone No.";
             // 
@@ -123,6 +123,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnExit
             // 
@@ -137,10 +138,10 @@
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // cbBatch
             // 
-            this.cbBatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.cbBatch.FormattingEnabled = true;
@@ -160,6 +161,7 @@
             // 
             // txtFullName
             // 
+            this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtFullName.Location = new System.Drawing.Point(525, 216);
@@ -169,6 +171,7 @@
             // 
             // txtRollNo
             // 
+            this.txtRollNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRollNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRollNo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtRollNo.Location = new System.Drawing.Point(525, 306);
@@ -178,6 +181,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtEmail.Location = new System.Drawing.Point(525, 391);
@@ -187,6 +191,7 @@
             // 
             // txtPhoneNo
             // 
+            this.txtPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtPhoneNo.Location = new System.Drawing.Point(525, 484);
@@ -198,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1134, 757);
             this.Controls.Add(this.txtPhoneNo);
             this.Controls.Add(this.txtEmail);
@@ -216,7 +221,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(362, 82);
             this.Name = "AddStudent";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddStudent";
             this.ResumeLayout(false);
             this.PerformLayout();
