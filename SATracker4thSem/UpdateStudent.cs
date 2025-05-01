@@ -103,5 +103,15 @@ namespace SATracker4thSem
             txtEmail.Clear();
             txtPhoneNo.Clear();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
