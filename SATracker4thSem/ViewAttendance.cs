@@ -8,15 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
 
 namespace SATracker4thSem
 {
     public partial class ViewAttendance : Form
     {
+        private static string connectionString = "server=localhost;uid=root;pwd=;database=SATracker_db;";
+
         DataTable attendanceData;
 
         private void LoadAttendanceData()
         {
+        
             attendanceData = new DataTable();
             attendanceData.Columns.Add("Date");
             attendanceData.Columns.Add("Batch");
@@ -25,29 +29,53 @@ namespace SATracker4thSem
             attendanceData.Columns.Add("Late");
 
             DateTime selectedDate = dateTimePicker1.Value;
-            string batch = comboBox1.Text;
+            string batch = cbBatch.Text;
 
-            for (int i = 6; i >= 0; i--)
+            using (var connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString))
             {
-                DateTime date = selectedDate.AddDays(-i);
-                attendanceData.Rows.Add(
-                    date.ToString("yyyy-MM-dd"),
-                    batch,
-                    45 + i % 4, // Present
-                    3 - i % 3,  // Absent
-                    i % 4       // Late
-                );
+                for (int i = 6; i >= 0; i--)
+                {
+                    DateTime date = selectedDate.AddDays(-i);
+                    string dateString = date.ToString("yyyy-MM-dd");
+
+                    var query = @"
+                SELECT status, COUNT(*) AS count
+                FROM Attendance
+                WHERE attendance_date = @Date AND batch = @Batch
+                GROUP BY status";
+
+                    var result = connection.Query(query, new { Date = date, Batch = batch });
+
+                    int present = 0, absent = 0, late = 0;
+
+                    foreach (var row in result)
+                    {
+                        string status = row.status;
+                        int count =(int) row.count;
+
+                        switch (status.ToUpper())
+                        {
+                            case "PRESENT": present = count; break;
+                            case "ABSENT": absent = count; break;
+                            case "LATE": late = count; break;
+                        }
+                    }
+
+                    attendanceData.Rows.Add(dateString, batch, present, absent, late);
+                }
             }
 
             dataGridView1.DataSource = attendanceData;
         }
+
+        
 
 
         public ViewAttendance()
         {
             InitializeComponent();
             dateTimePicker1.ValueChanged += (s, e) => LoadAttendanceData();
-            comboBox1.SelectedIndexChanged += (s, e) => LoadAttendanceData();
+            cbBatch.SelectedIndexChanged += (s, e) => LoadAttendanceData();
 
         }
 
@@ -85,8 +113,8 @@ namespace SATracker4thSem
 
         private void ViewAttendance_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.AddRange(new string[] { "10-A", "10-B", "11-A" }); // sample batch list
-            comboBox1.SelectedIndex = 0;
+           
+            cbBatch.SelectedIndex = 0;
             dateTimePicker1.Value = DateTime.Today;
 
             LoadAttendanceData();
