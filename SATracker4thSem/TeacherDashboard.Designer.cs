@@ -156,6 +156,7 @@
             this.btnViewAttendance.TabIndex = 2;
             this.btnViewAttendance.Text = "View Attendance";
             this.btnViewAttendance.UseVisualStyleBackColor = false;
+            this.btnViewAttendance.Click += new System.EventHandler(this.btnViewAttendance_Click);
             // 
             // btnMarkAttendance
             // 

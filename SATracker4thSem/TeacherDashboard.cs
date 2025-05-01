@@ -49,6 +49,9 @@ namespace SATracker4thSem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            pbLogo.SendToBack();
+            lblSlogan.SendToBack();
+            OpenChildForm(new MarkAttendance());
 
         }
 
@@ -78,6 +81,14 @@ namespace SATracker4thSem
             pbLogo.SendToBack();
             lblSlogan.SendToBack();
             OpenChildForm(new DeleteStudent());
+
+        }
+
+        private void btnViewAttendance_Click(object sender, EventArgs e)
+        {
+            pbLogo.SendToBack();
+            lblSlogan.SendToBack();
+            OpenChildForm(new ViewAttendance());
 
         }
     }

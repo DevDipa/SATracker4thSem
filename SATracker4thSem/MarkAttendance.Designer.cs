@@ -85,6 +85,7 @@
             this.cbBatch.Name = "cbBatch";
             this.cbBatch.Size = new System.Drawing.Size(254, 33);
             this.cbBatch.TabIndex = 21;
+            this.cbBatch.SelectedIndexChanged += new System.EventHandler(this.cbBatch_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -121,6 +122,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -162,6 +164,7 @@
             this.btnSaveAttendance.TabIndex = 28;
             this.btnSaveAttendance.Text = "Save Attendance";
             this.btnSaveAttendance.UseVisualStyleBackColor = false;
+            this.btnSaveAttendance.Click += new System.EventHandler(this.btnSaveAttendance_Click);
             // 
             // MarkAttendance
             // 
