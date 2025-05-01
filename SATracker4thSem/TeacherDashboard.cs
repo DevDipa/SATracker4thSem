@@ -65,6 +65,12 @@ namespace SATracker4thSem
 
         }
 
+        private void btnUpdateStudent_Click(object sender, EventArgs e)
+        {
+            pbLogo.SendToBack();
+            lblSlogan.SendToBack();
+            OpenChildForm(new UpdateStudent());
 
+        }
     }
 }

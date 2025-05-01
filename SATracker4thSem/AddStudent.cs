@@ -103,6 +103,7 @@ namespace SATracker4thSem
 
         private void ClearFields()
         {
+           
             txtRollNo.Clear();
             txtFullName.Clear();
             cbBatch.SelectedIndex = -1;

@@ -69,6 +69,7 @@
             this.tbRollNotobeUpdated.Name = "tbRollNotobeUpdated";
             this.tbRollNotobeUpdated.Size = new System.Drawing.Size(234, 41);
             this.tbRollNotobeUpdated.TabIndex = 1;
+            this.tbRollNotobeUpdated.TextChanged += new System.EventHandler(this.tbRollNotobeUpdated_TextChanged);
             // 
             // label7
             // 
@@ -94,6 +95,7 @@
             this.btnExit.TabIndex = 30;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnUpdate
             // 
@@ -108,6 +110,7 @@
             this.btnUpdate.TabIndex = 29;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label1
             // 
@@ -117,7 +120,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label1.Location = new System.Drawing.Point(469, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 39);
+            this.label1.Size = new System.Drawing.Size(257, 38);
             this.label1.TabIndex = 28;
             this.label1.Text = "Update Student";
             // 
@@ -166,7 +169,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label2.Location = new System.Drawing.Point(311, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 39);
+            this.label2.Size = new System.Drawing.Size(101, 38);
             this.label2.TabIndex = 13;
             this.label2.Text = "Batch";
             // 
@@ -177,7 +180,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label6.Location = new System.Drawing.Point(306, 373);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 39);
+            this.label6.Size = new System.Drawing.Size(171, 38);
             this.label6.TabIndex = 17;
             this.label6.Text = "Phone No.";
             // 
@@ -216,6 +219,7 @@
             this.txtRollNo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtRollNo.Location = new System.Drawing.Point(506, 224);
             this.txtRollNo.Name = "txtRollNo";
+            this.txtRollNo.ReadOnly = true;
             this.txtRollNo.Size = new System.Drawing.Size(309, 45);
             this.txtRollNo.TabIndex = 22;
             // 
@@ -226,7 +230,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label5.Location = new System.Drawing.Point(312, 295);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 39);
+            this.label5.Size = new System.Drawing.Size(98, 38);
             this.label5.TabIndex = 16;
             this.label5.Text = "Email";
             // 
@@ -237,7 +241,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label3.Location = new System.Drawing.Point(311, 145);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 39);
+            this.label3.Size = new System.Drawing.Size(165, 38);
             this.label3.TabIndex = 14;
             this.label3.Text = "Full Name";
             // 
@@ -257,7 +261,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label4.Location = new System.Drawing.Point(311, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 39);
+            this.label4.Size = new System.Drawing.Size(133, 38);
             this.label4.TabIndex = 15;
             this.label4.Text = "Roll No.";
             // 
