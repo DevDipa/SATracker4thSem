@@ -108,6 +108,7 @@
             this.btnDeleteStudent.TabIndex = 5;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // btnUpdateStudent
             // 

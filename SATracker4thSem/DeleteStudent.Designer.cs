@@ -42,8 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.tbRollNotobeDeleted = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -58,7 +58,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label1.Location = new System.Drawing.Point(469, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 39);
+            this.label1.Size = new System.Drawing.Size(246, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Delete Student";
             // 
@@ -68,6 +68,7 @@
             this.txtPhoneNo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtPhoneNo.Location = new System.Drawing.Point(506, 373);
             this.txtPhoneNo.Name = "txtPhoneNo";
+            this.txtPhoneNo.ReadOnly = true;
             this.txtPhoneNo.Size = new System.Drawing.Size(309, 45);
             this.txtPhoneNo.TabIndex = 24;
             // 
@@ -77,6 +78,7 @@
             this.txtEmail.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtEmail.Location = new System.Drawing.Point(506, 295);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(309, 45);
             this.txtEmail.TabIndex = 23;
             // 
@@ -86,6 +88,7 @@
             this.txtRollNo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtRollNo.Location = new System.Drawing.Point(506, 224);
             this.txtRollNo.Name = "txtRollNo";
+            this.txtRollNo.ReadOnly = true;
             this.txtRollNo.Size = new System.Drawing.Size(309, 45);
             this.txtRollNo.TabIndex = 22;
             // 
@@ -95,11 +98,13 @@
             this.txtFullName.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtFullName.Location = new System.Drawing.Point(506, 145);
             this.txtFullName.Name = "txtFullName";
+            this.txtFullName.ReadOnly = true;
             this.txtFullName.Size = new System.Drawing.Size(309, 45);
             this.txtFullName.TabIndex = 21;
             // 
             // cbBatch
             // 
+            this.cbBatch.Enabled = false;
             this.cbBatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -145,6 +150,7 @@
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label6
             // 
@@ -153,7 +159,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label6.Location = new System.Drawing.Point(306, 373);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 39);
+            this.label6.Size = new System.Drawing.Size(171, 38);
             this.label6.TabIndex = 17;
             this.label6.Text = "Phone No.";
             // 
@@ -164,7 +170,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label5.Location = new System.Drawing.Point(312, 295);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 39);
+            this.label5.Size = new System.Drawing.Size(98, 38);
             this.label5.TabIndex = 16;
             this.label5.Text = "Email";
             // 
@@ -175,7 +181,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label4.Location = new System.Drawing.Point(311, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 39);
+            this.label4.Size = new System.Drawing.Size(133, 38);
             this.label4.TabIndex = 15;
             this.label4.Text = "Roll No.";
             // 
@@ -186,7 +192,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label3.Location = new System.Drawing.Point(311, 145);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 39);
+            this.label3.Size = new System.Drawing.Size(165, 38);
             this.label3.TabIndex = 14;
             this.label3.Text = "Full Name";
             // 
@@ -197,7 +203,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.label2.Location = new System.Drawing.Point(311, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 39);
+            this.label2.Size = new System.Drawing.Size(101, 38);
             this.label2.TabIndex = 13;
             this.label2.Text = "Batch";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -213,6 +219,17 @@
             this.panel1.TabIndex = 26;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // tbRollNotobeDeleted
+            // 
+            this.tbRollNotobeDeleted.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbRollNotobeDeleted.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRollNotobeDeleted.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.tbRollNotobeDeleted.Location = new System.Drawing.Point(668, 21);
+            this.tbRollNotobeDeleted.Name = "tbRollNotobeDeleted";
+            this.tbRollNotobeDeleted.Size = new System.Drawing.Size(234, 41);
+            this.tbRollNotobeDeleted.TabIndex = 1;
+            this.tbRollNotobeDeleted.TextChanged += new System.EventHandler(this.tbRollNotobeDeleted_TextChanged);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -223,16 +240,6 @@
             this.label7.Size = new System.Drawing.Size(560, 36);
             this.label7.TabIndex = 0;
             this.label7.Text = "Enter roll no. of the student to be deleted:";
-            // 
-            // tbRollNotobeDeleted
-            // 
-            this.tbRollNotobeDeleted.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tbRollNotobeDeleted.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRollNotobeDeleted.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.tbRollNotobeDeleted.Location = new System.Drawing.Point(668, 21);
-            this.tbRollNotobeDeleted.Name = "tbRollNotobeDeleted";
-            this.tbRollNotobeDeleted.Size = new System.Drawing.Size(234, 41);
-            this.tbRollNotobeDeleted.TabIndex = 1;
             // 
             // label8
             // 
