@@ -31,27 +31,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnViewMyAttendannce = new System.Windows.Forms.Button();
+            this.btnMyAttendannce = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.lblSlogan = new System.Windows.Forms.Label();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.pnlMain1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.panel1.Controls.Add(this.pnlMain);
             this.panel1.Controls.Add(this.btnLogOut);
-            this.panel1.Controls.Add(this.btnViewMyAttendannce);
+            this.panel1.Controls.Add(this.btnMyAttendannce);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -73,20 +76,22 @@
             this.btnLogOut.TabIndex = 9;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // btnViewMyAttendannce
+            // btnMyAttendannce
             // 
-            this.btnViewMyAttendannce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewMyAttendannce.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewMyAttendannce.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnViewMyAttendannce.Image = ((System.Drawing.Image)(resources.GetObject("btnViewMyAttendannce.Image")));
-            this.btnViewMyAttendannce.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewMyAttendannce.Location = new System.Drawing.Point(12, 111);
-            this.btnViewMyAttendannce.Name = "btnViewMyAttendannce";
-            this.btnViewMyAttendannce.Size = new System.Drawing.Size(332, 56);
-            this.btnViewMyAttendannce.TabIndex = 1;
-            this.btnViewMyAttendannce.Text = "View  Attendance";
-            this.btnViewMyAttendannce.UseVisualStyleBackColor = true;
+            this.btnMyAttendannce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyAttendannce.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyAttendannce.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnMyAttendannce.Image = ((System.Drawing.Image)(resources.GetObject("btnMyAttendannce.Image")));
+            this.btnMyAttendannce.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyAttendannce.Location = new System.Drawing.Point(12, 111);
+            this.btnMyAttendannce.Name = "btnMyAttendannce";
+            this.btnMyAttendannce.Size = new System.Drawing.Size(332, 56);
+            this.btnMyAttendannce.TabIndex = 1;
+            this.btnMyAttendannce.Text = "My Attendance";
+            this.btnMyAttendannce.UseVisualStyleBackColor = true;
+            this.btnMyAttendannce.Click += new System.EventHandler(this.btnMyAttendannce_Click);
             // 
             // label1
             // 
@@ -157,26 +162,40 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Student Attendance Tracker";
             // 
-            // pictureBox1
+            // pbLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(900, 84);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(900, 84);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(500, 500);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbLogo.TabIndex = 2;
+            this.pbLogo.TabStop = false;
             // 
-            // label2
+            // lblSlogan
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.label2.Location = new System.Drawing.Point(938, 662);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(513, 38);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Connecting Code with Creativity";
+            this.lblSlogan.AutoSize = true;
+            this.lblSlogan.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSlogan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.lblSlogan.Location = new System.Drawing.Point(938, 662);
+            this.lblSlogan.Name = "lblSlogan";
+            this.lblSlogan.Size = new System.Drawing.Size(513, 38);
+            this.lblSlogan.TabIndex = 3;
+            this.lblSlogan.Text = "Connecting Code with Creativity";
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.Location = new System.Drawing.Point(661, 158);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1134, 757);
+            this.pnlMain.TabIndex = 10;
+            // 
+            // pnlMain1
+            // 
+            this.pnlMain1.Location = new System.Drawing.Point(661, 158);
+            this.pnlMain1.Name = "pnlMain1";
+            this.pnlMain1.Size = new System.Drawing.Size(1134, 757);
+            this.pnlMain1.TabIndex = 5;
             // 
             // StudentDashboard
             // 
@@ -184,10 +203,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1496, 839);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblSlogan);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMain1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -199,7 +219,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,13 +230,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Label lblSlogan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnViewMyAttendannce;
+        private System.Windows.Forms.Button btnMyAttendannce;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.Panel pnlMain1;
     }
 }

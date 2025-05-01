@@ -91,5 +91,20 @@ namespace SATracker4thSem
             OpenChildForm(new ViewAttendance());
 
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            // Confirm logout (optional but recommended)
+            var result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                // Open LoginForm in a new thread-safe context
+                this.Hide();  // Hide TeacherDashboard first
+
+                LoginForm loginForm = new LoginForm();
+                loginForm.FormClosed += (s, args) => this.Close(); // Ensure app closes if login form is closed
+                loginForm.Show();
+            }
+        }
     }
 }

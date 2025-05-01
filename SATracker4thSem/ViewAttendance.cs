@@ -36,7 +36,7 @@ namespace SATracker4thSem
                 for (int i = 6; i >= 0; i--)
                 {
                     DateTime date = selectedDate.AddDays(-i);
-                    string dateString = date.ToString("yyyy-MM-dd");
+                    string dateString = date.ToString("dd/MM/yyyy");
 
                     var query = @"
                 SELECT status, COUNT(*) AS count
