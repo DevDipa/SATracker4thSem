@@ -76,7 +76,7 @@
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(12, 500);
+            this.btnLogOut.Location = new System.Drawing.Point(12, 609);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(332, 56);
             this.btnLogOut.TabIndex = 8;
@@ -103,7 +103,7 @@
             this.btnDeleteStudent.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDeleteStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteStudent.Image")));
             this.btnDeleteStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteStudent.Location = new System.Drawing.Point(12, 422);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(12, 518);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(332, 56);
             this.btnDeleteStudent.TabIndex = 5;
@@ -119,7 +119,7 @@
             this.btnUpdateStudent.ForeColor = System.Drawing.SystemColors.Control;
             this.btnUpdateStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateStudent.Image")));
             this.btnUpdateStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateStudent.Location = new System.Drawing.Point(12, 344);
+            this.btnUpdateStudent.Location = new System.Drawing.Point(12, 430);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
             this.btnUpdateStudent.Size = new System.Drawing.Size(332, 56);
             this.btnUpdateStudent.TabIndex = 4;
@@ -135,7 +135,7 @@
             this.btnAddStudent.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAddStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStudent.Image")));
             this.btnAddStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStudent.Location = new System.Drawing.Point(12, 268);
+            this.btnAddStudent.Location = new System.Drawing.Point(12, 339);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(332, 56);
             this.btnAddStudent.TabIndex = 3;
@@ -151,7 +151,7 @@
             this.btnViewAttendance.ForeColor = System.Drawing.SystemColors.Control;
             this.btnViewAttendance.Image = ((System.Drawing.Image)(resources.GetObject("btnViewAttendance.Image")));
             this.btnViewAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewAttendance.Location = new System.Drawing.Point(12, 188);
+            this.btnViewAttendance.Location = new System.Drawing.Point(12, 246);
             this.btnViewAttendance.Name = "btnViewAttendance";
             this.btnViewAttendance.Size = new System.Drawing.Size(332, 58);
             this.btnViewAttendance.TabIndex = 2;
@@ -167,7 +167,7 @@
             this.btnMarkAttendance.ForeColor = System.Drawing.SystemColors.Control;
             this.btnMarkAttendance.Image = ((System.Drawing.Image)(resources.GetObject("btnMarkAttendance.Image")));
             this.btnMarkAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarkAttendance.Location = new System.Drawing.Point(12, 111);
+            this.btnMarkAttendance.Location = new System.Drawing.Point(12, 158);
             this.btnMarkAttendance.Name = "btnMarkAttendance";
             this.btnMarkAttendance.Size = new System.Drawing.Size(332, 56);
             this.btnMarkAttendance.TabIndex = 1;

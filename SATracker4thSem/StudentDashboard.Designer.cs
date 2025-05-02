@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMyProfile = new System.Windows.Forms.Button();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnMyAttendannce = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblSlogan = new System.Windows.Forms.Label();
-            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlMain1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -52,6 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.panel1.Controls.Add(this.btnMyProfile);
             this.panel1.Controls.Add(this.pnlMain);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnMyAttendannce);
@@ -62,6 +64,28 @@
             this.panel1.Size = new System.Drawing.Size(362, 839);
             this.panel1.TabIndex = 0;
             // 
+            // btnMyProfile
+            // 
+            this.btnMyProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyProfile.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnMyProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnMyProfile.Image")));
+            this.btnMyProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyProfile.Location = new System.Drawing.Point(12, 158);
+            this.btnMyProfile.Name = "btnMyProfile";
+            this.btnMyProfile.Size = new System.Drawing.Size(332, 56);
+            this.btnMyProfile.TabIndex = 11;
+            this.btnMyProfile.Text = "My Profile";
+            this.btnMyProfile.UseVisualStyleBackColor = true;
+            this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.Location = new System.Drawing.Point(661, 158);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1134, 757);
+            this.pnlMain.TabIndex = 10;
+            // 
             // btnLogOut
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
@@ -70,7 +94,7 @@
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(12, 193);
+            this.btnLogOut.Location = new System.Drawing.Point(12, 338);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(332, 56);
             this.btnLogOut.TabIndex = 9;
@@ -85,7 +109,7 @@
             this.btnMyAttendannce.ForeColor = System.Drawing.SystemColors.Control;
             this.btnMyAttendannce.Image = ((System.Drawing.Image)(resources.GetObject("btnMyAttendannce.Image")));
             this.btnMyAttendannce.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyAttendannce.Location = new System.Drawing.Point(12, 111);
+            this.btnMyAttendannce.Location = new System.Drawing.Point(12, 247);
             this.btnMyAttendannce.Name = "btnMyAttendannce";
             this.btnMyAttendannce.Size = new System.Drawing.Size(332, 56);
             this.btnMyAttendannce.TabIndex = 1;
@@ -183,13 +207,6 @@
             this.lblSlogan.TabIndex = 3;
             this.lblSlogan.Text = "Connecting Code with Creativity";
             // 
-            // pnlMain
-            // 
-            this.pnlMain.Location = new System.Drawing.Point(661, 158);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1134, 757);
-            this.pnlMain.TabIndex = 10;
-            // 
             // pnlMain1
             // 
             this.pnlMain1.Location = new System.Drawing.Point(661, 158);
@@ -240,5 +257,6 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlMain1;
+        private System.Windows.Forms.Button btnMyProfile;
     }
 }

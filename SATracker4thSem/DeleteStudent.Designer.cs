@@ -66,7 +66,7 @@
             this.btnExit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnExit.Location = new System.Drawing.Point(975, 681);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(122, 51);
@@ -105,7 +105,7 @@
             // 
             this.tbRollNotobeDeleted.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tbRollNotobeDeleted.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRollNotobeDeleted.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.tbRollNotobeDeleted.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tbRollNotobeDeleted.Location = new System.Drawing.Point(749, 21);
             this.tbRollNotobeDeleted.Name = "tbRollNotobeDeleted";
             this.tbRollNotobeDeleted.Size = new System.Drawing.Size(234, 41);
@@ -128,12 +128,13 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label8.Location = new System.Drawing.Point(380, 228);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(322, 29);
             this.label8.TabIndex = 27;
             this.label8.Text = "Confirm the following details:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtPhoneNo
             // 
@@ -179,10 +180,11 @@
             // 
             // cbBatch
             // 
+            this.cbBatch.BackColor = System.Drawing.SystemColors.Control;
             this.cbBatch.Enabled = false;
             this.cbBatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbBatch.FormattingEnabled = true;
             this.cbBatch.Items.AddRange(new object[] {
             "BCA - I",
@@ -197,6 +199,7 @@
             this.cbBatch.Name = "cbBatch";
             this.cbBatch.Size = new System.Drawing.Size(196, 46);
             this.cbBatch.TabIndex = 33;
+            this.cbBatch.SelectedIndexChanged += new System.EventHandler(this.cbBatch_SelectedIndexChanged);
             // 
             // txtRollNo
             // 
@@ -272,11 +275,13 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(362, 82);
             this.Name = "DeleteStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteStudent";
+            this.Load += new System.EventHandler(this.DeleteStudent_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

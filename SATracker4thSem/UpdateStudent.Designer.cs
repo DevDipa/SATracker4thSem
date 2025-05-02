@@ -62,7 +62,7 @@
             // 
             this.tbRollNotobeUpdated.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tbRollNotobeUpdated.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRollNotobeUpdated.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.tbRollNotobeUpdated.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tbRollNotobeUpdated.Location = new System.Drawing.Point(742, 18);
             this.tbRollNotobeUpdated.Name = "tbRollNotobeUpdated";
             this.tbRollNotobeUpdated.Size = new System.Drawing.Size(234, 41);
@@ -87,7 +87,7 @@
             this.btnExit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnExit.Location = new System.Drawing.Point(975, 689);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(122, 51);
@@ -128,7 +128,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label8.Location = new System.Drawing.Point(414, 229);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(322, 29);
@@ -138,7 +138,7 @@
             // txtPhoneNo
             // 
             this.txtPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNo.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPhoneNo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtPhoneNo.Location = new System.Drawing.Point(563, 589);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.Size = new System.Drawing.Size(309, 45);
@@ -169,7 +169,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtEmail.Location = new System.Drawing.Point(563, 511);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(309, 45);
@@ -179,7 +179,7 @@
             // 
             this.cbBatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbBatch.FormattingEnabled = true;
             this.cbBatch.Items.AddRange(new object[] {
             "BCA - I",
@@ -198,7 +198,7 @@
             // txtRollNo
             // 
             this.txtRollNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRollNo.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtRollNo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtRollNo.Location = new System.Drawing.Point(563, 440);
             this.txtRollNo.Name = "txtRollNo";
             this.txtRollNo.ReadOnly = true;
@@ -230,7 +230,7 @@
             // txtFullName
             // 
             this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFullName.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtFullName.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtFullName.Location = new System.Drawing.Point(563, 361);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(309, 45);
@@ -268,6 +268,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(362, 82);
             this.Name = "UpdateStudent";

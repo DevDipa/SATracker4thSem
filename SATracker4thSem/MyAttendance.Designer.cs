@@ -33,16 +33,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPrintAttendance = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMyRollNo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cbBatch = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtMyRollNo = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnLoadAttendance = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.btnPrintAttendance1 = new System.Windows.Forms.Button();
+            this.btnLoadAttendance1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +58,7 @@
             this.btnPrintAttendance.ForeColor = System.Drawing.SystemColors.Control;
             this.btnPrintAttendance.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintAttendance.Image")));
             this.btnPrintAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrintAttendance.Location = new System.Drawing.Point(727, 695);
+            this.btnPrintAttendance.Location = new System.Drawing.Point(890, 883);
             this.btnPrintAttendance.Name = "btnPrintAttendance";
             this.btnPrintAttendance.Size = new System.Drawing.Size(366, 51);
             this.btnPrintAttendance.TabIndex = 36;
@@ -77,6 +79,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1134, 102);
             this.panel1.TabIndex = 35;
+            // 
+            // txtMyRollNo
+            // 
+            this.txtMyRollNo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtMyRollNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMyRollNo.Location = new System.Drawing.Point(841, 50);
+            this.txtMyRollNo.Name = "txtMyRollNo";
+            this.txtMyRollNo.Size = new System.Drawing.Size(200, 36);
+            this.txtMyRollNo.TabIndex = 23;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(836, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 29);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Roll No.";
             // 
             // cbBatch
             // 
@@ -146,33 +168,13 @@
             this.label1.Text = "My Attendance";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(836, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 29);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Roll No.";
-            // 
-            // txtMyRollNo
-            // 
-            this.txtMyRollNo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtMyRollNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMyRollNo.Location = new System.Drawing.Point(841, 50);
-            this.txtMyRollNo.Name = "txtMyRollNo";
-            this.txtMyRollNo.Size = new System.Drawing.Size(200, 36);
-            this.txtMyRollNo.TabIndex = 23;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -181,15 +183,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 193);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1110, 481);
             this.dataGridView1.TabIndex = 37;
@@ -204,7 +201,7 @@
             this.btnLoadAttendance.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLoadAttendance.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadAttendance.Image")));
             this.btnLoadAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoadAttendance.Location = new System.Drawing.Point(64, 694);
+            this.btnLoadAttendance.Location = new System.Drawing.Point(64, 882);
             this.btnLoadAttendance.Name = "btnLoadAttendance";
             this.btnLoadAttendance.Size = new System.Drawing.Size(366, 51);
             this.btnLoadAttendance.TabIndex = 38;
@@ -212,12 +209,48 @@
             this.btnLoadAttendance.UseVisualStyleBackColor = false;
             this.btnLoadAttendance.Click += new System.EventHandler(this.btnLoadAttendance_Click);
             // 
+            // btnPrintAttendance1
+            // 
+            this.btnPrintAttendance1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrintAttendance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnPrintAttendance1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintAttendance1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintAttendance1.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnPrintAttendance1.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintAttendance1.Image")));
+            this.btnPrintAttendance1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrintAttendance1.Location = new System.Drawing.Point(740, 694);
+            this.btnPrintAttendance1.Name = "btnPrintAttendance1";
+            this.btnPrintAttendance1.Size = new System.Drawing.Size(366, 51);
+            this.btnPrintAttendance1.TabIndex = 39;
+            this.btnPrintAttendance1.Text = "Print Attendance";
+            this.btnPrintAttendance1.UseVisualStyleBackColor = false;
+            this.btnPrintAttendance1.Click += new System.EventHandler(this.btnPrintAttendance1_Click);
+            // 
+            // btnLoadAttendance1
+            // 
+            this.btnLoadAttendance1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLoadAttendance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnLoadAttendance1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadAttendance1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadAttendance1.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLoadAttendance1.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadAttendance1.Image")));
+            this.btnLoadAttendance1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoadAttendance1.Location = new System.Drawing.Point(33, 694);
+            this.btnLoadAttendance1.Name = "btnLoadAttendance1";
+            this.btnLoadAttendance1.Size = new System.Drawing.Size(366, 51);
+            this.btnLoadAttendance1.TabIndex = 40;
+            this.btnLoadAttendance1.Text = "Load Attendance";
+            this.btnLoadAttendance1.UseVisualStyleBackColor = false;
+            this.btnLoadAttendance1.Click += new System.EventHandler(this.btnLoadAttendance1_Click);
+            // 
             // MyAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1134, 757);
+            this.Controls.Add(this.btnLoadAttendance1);
+            this.Controls.Add(this.btnPrintAttendance1);
             this.Controls.Add(this.btnLoadAttendance);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnPrintAttendance);
@@ -250,5 +283,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnLoadAttendance;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button btnPrintAttendance1;
+        private System.Windows.Forms.Button btnLoadAttendance1;
     }
 }

@@ -94,7 +94,6 @@ namespace SATracker4thSem
 
         private void btnLoadAttendance_Click(object sender, EventArgs e)
         {
-            FetchAttendance();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -110,6 +109,16 @@ namespace SATracker4thSem
         }
 
         private void btnPrintAttendance_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnLoadAttendance1_Click(object sender, EventArgs e)
+        {
+            FetchAttendance();
+        }
+
+        private void btnPrintAttendance1_Click(object sender, EventArgs e)
         {
             PrintDocument printDoc = new PrintDocument();
             printDoc.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);

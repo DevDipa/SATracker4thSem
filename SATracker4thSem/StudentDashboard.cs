@@ -52,5 +52,12 @@ namespace SATracker4thSem
             lblSlogan.SendToBack();
             OpenChildForm(new MyAttendance());
         }
+
+        private void btnMyProfile_Click(object sender, EventArgs e)
+        {
+            pbLogo.SendToBack();
+            lblSlogan.SendToBack();
+            OpenChildForm(new MyProfile());
+        }
     }
 }

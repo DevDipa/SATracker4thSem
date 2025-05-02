@@ -104,5 +104,20 @@ namespace SATracker4thSem
         {
 
         }
+
+        private void DeleteStudent_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbBatch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
