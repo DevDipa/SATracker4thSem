@@ -106,5 +106,13 @@ namespace SATracker4thSem
                 loginForm.Show();
             }
         }
+
+        private void btnViewStudents_Click(object sender, EventArgs e)
+        {
+            pbLogo.SendToBack();
+            lblSlogan.SendToBack();
+            OpenChildForm(new ViewStudents());
+
+        }
     }
 }

@@ -45,6 +45,7 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblSlogan = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnViewStudents = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -55,6 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.panel1.Controls.Add(this.btnViewStudents);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnDeleteStudent);
@@ -76,7 +78,7 @@
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(12, 609);
+            this.btnLogOut.Location = new System.Drawing.Point(12, 680);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(332, 56);
             this.btnLogOut.TabIndex = 8;
@@ -103,7 +105,7 @@
             this.btnDeleteStudent.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDeleteStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteStudent.Image")));
             this.btnDeleteStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteStudent.Location = new System.Drawing.Point(12, 518);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(12, 594);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(332, 56);
             this.btnDeleteStudent.TabIndex = 5;
@@ -119,7 +121,7 @@
             this.btnUpdateStudent.ForeColor = System.Drawing.SystemColors.Control;
             this.btnUpdateStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateStudent.Image")));
             this.btnUpdateStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateStudent.Location = new System.Drawing.Point(12, 430);
+            this.btnUpdateStudent.Location = new System.Drawing.Point(12, 505);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
             this.btnUpdateStudent.Size = new System.Drawing.Size(332, 56);
             this.btnUpdateStudent.TabIndex = 4;
@@ -135,7 +137,7 @@
             this.btnAddStudent.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAddStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStudent.Image")));
             this.btnAddStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStudent.Location = new System.Drawing.Point(12, 339);
+            this.btnAddStudent.Location = new System.Drawing.Point(12, 417);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(332, 56);
             this.btnAddStudent.TabIndex = 3;
@@ -262,6 +264,22 @@
             this.pnlMain.Size = new System.Drawing.Size(1134, 757);
             this.pnlMain.TabIndex = 4;
             // 
+            // btnViewStudents
+            // 
+            this.btnViewStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnViewStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewStudents.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnViewStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnViewStudents.Image")));
+            this.btnViewStudents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewStudents.Location = new System.Drawing.Point(12, 333);
+            this.btnViewStudents.Name = "btnViewStudents";
+            this.btnViewStudents.Size = new System.Drawing.Size(332, 56);
+            this.btnViewStudents.TabIndex = 9;
+            this.btnViewStudents.Text = "View Students";
+            this.btnViewStudents.UseVisualStyleBackColor = false;
+            this.btnViewStudents.Click += new System.EventHandler(this.btnViewStudents_Click);
+            // 
             // TeacherDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -309,5 +327,6 @@
         private System.Windows.Forms.Panel pnlMain;
         public System.Windows.Forms.PictureBox pbLogo;
         public System.Windows.Forms.Label lblSlogan;
+        private System.Windows.Forms.Button btnViewStudents;
     }
 }
