@@ -67,6 +67,26 @@ namespace SATracker4thSem
             }
         }
 
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            if(txtPassword.PasswordChar=='*')
+            {
+                btnHide.BringToFront();
+                txtPassword.PasswordChar = '\0';
+               
+            }
+            
+        }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                btnShow.BringToFront();
+                txtPassword.PasswordChar = '*';
+
+            }
+        }
     }
 }
 
