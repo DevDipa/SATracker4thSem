@@ -59,5 +59,18 @@ namespace SATracker4thSem
             lblSlogan.SendToBack();
             OpenChildForm(new MyProfile());
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            dateTimePicker1.Value = DateTime.Now;
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+
+            pbLogo.SendToBack();
+            lblSlogan.SendToBack();
+            OpenChildForm(new Dashboard());
+        }
     }
 }

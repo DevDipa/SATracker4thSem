@@ -28,20 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMyProfile = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnMyAttendannce = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblSlogan = new System.Windows.Forms.Label();
             this.pnlMain1 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,11 +54,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.btnMyProfile);
             this.panel1.Controls.Add(this.pnlMain);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnMyAttendannce);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -69,7 +72,7 @@
             this.btnMyProfile.ForeColor = System.Drawing.SystemColors.Control;
             this.btnMyProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnMyProfile.Image")));
             this.btnMyProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyProfile.Location = new System.Drawing.Point(12, 158);
+            this.btnMyProfile.Location = new System.Drawing.Point(12, 176);
             this.btnMyProfile.Name = "btnMyProfile";
             this.btnMyProfile.Size = new System.Drawing.Size(332, 56);
             this.btnMyProfile.TabIndex = 11;
@@ -92,7 +95,7 @@
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(12, 338);
+            this.btnLogOut.Location = new System.Drawing.Point(12, 362);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(332, 56);
             this.btnLogOut.TabIndex = 9;
@@ -107,7 +110,7 @@
             this.btnMyAttendannce.ForeColor = System.Drawing.SystemColors.Control;
             this.btnMyAttendannce.Image = ((System.Drawing.Image)(resources.GetObject("btnMyAttendannce.Image")));
             this.btnMyAttendannce.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyAttendannce.Location = new System.Drawing.Point(12, 247);
+            this.btnMyAttendannce.Location = new System.Drawing.Point(12, 268);
             this.btnMyAttendannce.Name = "btnMyAttendannce";
             this.btnMyAttendannce.Size = new System.Drawing.Size(332, 56);
             this.btnMyAttendannce.TabIndex = 1;
@@ -115,20 +118,10 @@
             this.btnMyAttendannce.UseVisualStyleBackColor = true;
             this.btnMyAttendannce.Click += new System.EventHandler(this.btnMyAttendannce_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(52, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DASHBOARD";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label3);
@@ -137,6 +130,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1134, 82);
             this.panel2.TabIndex = 1;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.CustomFormat = "hh:mm:ss tt";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(751, 25);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 34);
+            this.dateTimePicker1.TabIndex = 6;
             // 
             // label4
             // 
@@ -199,6 +203,28 @@
             this.pnlMain1.Size = new System.Drawing.Size(1134, 757);
             this.pnlMain1.TabIndex = 5;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(12, 84);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(332, 56);
+            this.btnDashboard.TabIndex = 12;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
             // StudentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,7 +242,6 @@
             this.Text = "StudentDashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -229,7 +254,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Label lblSlogan;
@@ -241,5 +265,8 @@
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlMain1;
         private System.Windows.Forms.Button btnMyProfile;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnDashboard;
     }
 }

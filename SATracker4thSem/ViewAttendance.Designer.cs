@@ -112,7 +112,6 @@
             this.cbBatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbBatch.FormattingEnabled = true;
             this.cbBatch.Items.AddRange(new object[] {
             "BCA - I",
             "BCA - II",
