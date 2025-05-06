@@ -28,7 +28,6 @@ namespace SATracker4thSem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
             // Input Validation
             if (string.IsNullOrWhiteSpace(txtRollNo.Text) ||
                 string.IsNullOrWhiteSpace(txtFullName.Text) ||
@@ -40,10 +39,18 @@ namespace SATracker4thSem
                 return;
             }
 
-            // Check if roll number is a valid integer
-            if (!int.TryParse(txtRollNo.Text, out int rollNo))
+            // Roll number validation
+            if (!int.TryParse(txtRollNo.Text.Trim(), out int rollNo))
             {
                 MessageBox.Show("Roll number must be a valid integer.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Full name validation
+            string fullNamePattern = @"^[A-Za-z. ]+$";
+            if (!Regex.IsMatch(txtFullName.Text.Trim(), fullNamePattern))
+            {
+                MessageBox.Show("Full name can only contain alphabets, dots, and spaces.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -55,18 +62,38 @@ namespace SATracker4thSem
                 return;
             }
 
-            // Phone number format validation (only digits, 7 to 15 characters)
-            string phonePattern = @"^\d{7,15}$";
+            // Phone number validation (10 digits)
+            string phonePattern = @"^\d{10}$";
             if (!Regex.IsMatch(txtPhoneNo.Text.Trim(), phonePattern))
             {
-                MessageBox.Show("Phone number must be 7 to 15 digits long and contain only numbers.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Phone number must be 10 digits long and contain only numbers.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             using (var connection = Database.GetConnection())
             {
-                string query = @"INSERT INTO Students (roll_no, full_name, batch, email, phone_no) 
-                         VALUES (@RollNo, @FullName, @Batch, @Email, @PhoneNo)";
+                // Check for existing roll number, email, or phone number
+                string checkQuery = @"SELECT COUNT(*) FROM Students 
+                              WHERE roll_no = @RollNo 
+                                 OR email = @Email 
+                                 OR phone_no = @PhoneNo";
+
+                int count = connection.ExecuteScalar<int>(checkQuery, new
+                {
+                    RollNo = rollNo,
+                    Email = txtEmail.Text.Trim(),
+                    PhoneNo = txtPhoneNo.Text.Trim()
+                });
+
+                if (count > 0)
+                {
+                    MessageBox.Show("A student with this Roll No, Email, or Phone No already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Insert query
+                string insertQuery = @"INSERT INTO Students (roll_no, full_name, batch, email, phone_no) 
+                               VALUES (@RollNo, @FullName, @Batch, @Email, @PhoneNo)";
 
                 var parameters = new
                 {
@@ -79,7 +106,7 @@ namespace SATracker4thSem
 
                 try
                 {
-                    int rowsInserted = connection.Execute(query, parameters);
+                    int rowsInserted = connection.Execute(insertQuery, parameters);
                     if (rowsInserted > 0)
                     {
                         MessageBox.Show("Student added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -89,10 +116,6 @@ namespace SATracker4thSem
                     {
                         MessageBox.Show("Failed to add student.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                catch (MySqlException ex) when (ex.Number == 1062)
-                {
-                    MessageBox.Show("A student with this roll number already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 catch (Exception ex)
                 {

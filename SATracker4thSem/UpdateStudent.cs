@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper; 
@@ -45,8 +46,7 @@ namespace SATracker4thSem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-          
-            // Basic validation
+            // Basic input validation
             if (string.IsNullOrWhiteSpace(tbRollNotobeUpdated.Text) ||
                 string.IsNullOrWhiteSpace(txtFullName.Text) ||
                 string.IsNullOrWhiteSpace(cbBatch.Text) ||
@@ -57,23 +57,66 @@ namespace SATracker4thSem
                 return;
             }
 
-            // Parse the original roll number (from the search box)
+            // Validate roll number (used for locating the student)
             if (!int.TryParse(tbRollNotobeUpdated.Text.Trim(), out int rollNo))
             {
                 MessageBox.Show("Invalid Roll Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            // Full name validation
+            string fullNamePattern = @"^[A-Za-z. ]+$";
+            if (!Regex.IsMatch(txtFullName.Text.Trim(), fullNamePattern))
+            {
+                MessageBox.Show("Full name can only contain alphabets, dots, and spaces.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Email format validation
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            if (!Regex.IsMatch(txtEmail.Text.Trim(), emailPattern))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Phone number validation
+            string phonePattern = @"^\d{10}$";
+            if (!Regex.IsMatch(txtPhoneNo.Text.Trim(), phonePattern))
+            {
+                MessageBox.Show("Phone number must be 10 digits long and contain only numbers.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             using (var conn = Database.GetConnection())
             {
-                string query = @"UPDATE Students 
-                         SET full_name = @FullName, 
-                             batch = @Batch, 
-                             email = @Email, 
-                             phone_no = @PhoneNo 
-                         WHERE roll_no = @RollNo"; // roll_no is NOT changed
+                // Check for duplicate email or phone number in other students
+                string checkQuery = @"SELECT COUNT(*) FROM Students 
+                              WHERE (email = @Email OR phone_no = @PhoneNo) 
+                              AND roll_no != @RollNo"; // exclude current student
 
-                var result = conn.Execute(query, new
+                int count = conn.ExecuteScalar<int>(checkQuery, new
+                {
+                    Email = txtEmail.Text.Trim(),
+                    PhoneNo = txtPhoneNo.Text.Trim(),
+                    RollNo = rollNo
+                });
+
+                if (count > 0)
+                {
+                    MessageBox.Show("Email or Phone Number already exists for another student.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Proceed to update
+                string updateQuery = @"UPDATE Students 
+                               SET full_name = @FullName, 
+                                   batch = @Batch, 
+                                   email = @Email, 
+                                   phone_no = @PhoneNo 
+                               WHERE roll_no = @RollNo";
+
+                int result = conn.Execute(updateQuery, new
                 {
                     FullName = txtFullName.Text.Trim(),
                     Batch = cbBatch.Text.Trim(),
@@ -93,6 +136,7 @@ namespace SATracker4thSem
                 }
             }
         }
+
 
         private void ClearFields()
         {

@@ -161,6 +161,7 @@
             this.linkSignUp.TabIndex = 9;
             this.linkSignUp.TabStop = true;
             this.linkSignUp.Text = "Sign Up";
+            this.linkSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignUp_LinkClicked);
             // 
             // linkForgotPassword
             // 
@@ -175,6 +176,7 @@
             this.linkForgotPassword.TabIndex = 10;
             this.linkForgotPassword.TabStop = true;
             this.linkForgotPassword.Text = "Forgot Password?";
+            this.linkForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgotPassword_LinkClicked);
             // 
             // LoginForm
             // 

@@ -71,67 +71,121 @@ namespace SATracker4thSem
 
             }
         
-    }
+        }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-          
+            // Trim inputs
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
             string confirmPassword = txtConfirmPassword.Text;
             string email = txtEmail.Text.Trim();
             string role = rbTeacher.Checked ? "Teacher" : rbStudent.Checked ? "Student" : "";
 
-            // VALIDATIONS
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) ||
-                string.IsNullOrWhiteSpace(confirmPassword) || string.IsNullOrWhiteSpace(email) || string.IsNullOrEmpty(role))
+            // --- Validation ---
+
+            // Role selection check
+            if (string.IsNullOrEmpty(role))
+            {
+                MessageBox.Show("Please select a role (Teacher or Student).", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Empty field checks
+            if (string.IsNullOrWhiteSpace(username) ||
+                string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(confirmPassword) ||
+                string.IsNullOrWhiteSpace(email))
             {
                 MessageBox.Show("All fields are required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            // Username validation (alphanumeric, 3–20 characters)
+            string usernamePattern = @"^[a-zA-Z0-9]{3,20}$";
+            if (!Regex.IsMatch(username, usernamePattern))
+            {
+                MessageBox.Show("Username must be alphanumeric and 3–20 characters long.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Password strength (min 6 chars, 1 uppercase, 1 digit)
+            string passwordPattern = @"^(?=.*[A-Z])(?=.*\d).{6,}$";
+            if (!Regex.IsMatch(password, passwordPattern))
+            {
+                MessageBox.Show("Password must be at least 6 characters and include 1 uppercase letter and 1 number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Password match check
             if (password != confirmPassword)
             {
                 MessageBox.Show("Passwords do not match.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            // Email format validation
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            if (!Regex.IsMatch(email, emailPattern))
             {
-                MessageBox.Show("Invalid email format.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // DATABASE INSERT
-            using (IDbConnection db = new MySqlConnection("server=localhost;uid=root;pwd=;database=SATracker_db"))
+            // --- Database Duplicate Check & Insert ---
+            using (var connection = Database.GetConnection())
             {
-                try
+                string checkQuery = "SELECT COUNT(*) FROM Users WHERE username = @Username";
+                int exists = connection.ExecuteScalar<int>(checkQuery, new { Username = username });
+
+                if (exists > 0)
                 {
-                    // Check if username already exists
-                    var existing = db.QueryFirstOrDefault<string>("SELECT username FROM Users WHERE username = @Username", new { Username = username });
-
-                    if (existing != null)
-                    {
-                        MessageBox.Show("Username already exists. Please choose another.", "Duplicate User", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    // Insert new user
-                    string insertQuery = @"INSERT INTO Users (username, password, role) 
-                                   VALUES (@Username, @Password, @Role)";
-
-                    db.Execute(insertQuery, new { Username = username, Password = password, Role = role });
-
-                    MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Close SignUp form after success
+                    MessageBox.Show("Username already taken. Please choose another.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
-                catch (Exception ex)
+
+                // Check for duplicate email
+                string emailCheckQuery = "SELECT COUNT(*) FROM Users WHERE email = @Email";
+                int emailExists = connection.ExecuteScalar<int>(emailCheckQuery, new { Email = email });
+
+                if (emailExists > 0)
                 {
-                    MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An account with this email already exists.", "Duplicate Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+
+
+                // Insert new user
+                string insertQuery = @"INSERT INTO Users (username, password, role, email) 
+                       VALUES (@Username, @Password, @Role, @Email)";
+
+                var result = connection.Execute(insertQuery, new
+                {
+                    Username = username,
+                    Password = password,
+                    Role = role,
+                    Email = email
+                });
+
+                if (result > 0)
+                {
+                    MessageBox.Show("Account created successfully! You can now log in.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.Show();
+                    this.Hide(); // Close the SignUp form
+                }
+                else
+                {
+                    MessageBox.Show("Failed to create account. Try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
-    
-}
+
+
+
+
+    }
 }

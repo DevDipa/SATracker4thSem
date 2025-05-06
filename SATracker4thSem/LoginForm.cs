@@ -87,6 +87,19 @@ namespace SATracker4thSem
 
             }
         }
+
+        private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUp su = new SignUp();
+            su.Show();
+            this.Hide();
+        }
+
+        private void linkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPasssword fm = new ForgotPasssword();
+            fm.Show();
+        }
     }
 }
 
