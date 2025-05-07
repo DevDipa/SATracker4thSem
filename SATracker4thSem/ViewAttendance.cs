@@ -119,5 +119,29 @@ namespace SATracker4thSem
 
             LoadAttendanceData();
         }
+
+        private void btnUpdateAttendance_Click(object sender, EventArgs e)
+        {
+
+            // Find the parent TeacherDashboard
+            Form parentForm = this.TopLevelControl as Form;
+            if (parentForm is TeacherDashboard dashboard)
+            {
+                // Access the OpenChildForm method via reflection or make it public
+                var method = typeof(TeacherDashboard).GetMethod("OpenChildForm", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                if (method != null)
+                {
+                    string batch = cbBatch.SelectedItem.ToString();  // assuming you have this
+                    DateTime date = dateTimePicker1.Value;
+
+                    method.Invoke(dashboard, new object[] { new MarkAttendance(batch, date) });
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Parent dashboard not found. Cannot open MarkAttendance.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

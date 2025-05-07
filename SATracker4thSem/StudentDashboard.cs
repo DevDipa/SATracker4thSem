@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SATracker4thSem
 {
@@ -26,9 +27,13 @@ namespace SATracker4thSem
             childForm.BringToFront();
             childForm.Show();
         }
-        public StudentDashboard()
+
+        private string _username; // Store the username for later use
+        public StudentDashboard(string username)
         {
             InitializeComponent();
+            _username = username;
+            txtStudent.Text = _username;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -72,5 +77,8 @@ namespace SATracker4thSem
             lblSlogan.SendToBack();
             OpenChildForm(new Dashboard());
         }
+
+
+
     }
 }

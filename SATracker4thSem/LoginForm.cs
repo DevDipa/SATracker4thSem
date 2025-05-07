@@ -23,48 +23,40 @@ namespace SATracker4thSem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-         
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();
-
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            using (var conn = Database.GetConnection())
             {
-                MessageBox.Show("Please enter both username and password.", "Validation Error");
-                return;
-            }
-
-            using (IDbConnection db = new MySqlConnection("Server=localhost;Database=SATracker_db;Uid=root;Pwd=;"))
-            {
-                try
+                string query = "SELECT * FROM Users WHERE username = @Username AND password = @Password";
+                var user = conn.QueryFirstOrDefault(query, new
                 {
-                    string sql = "SELECT * FROM Users WHERE username = @Username AND password = @Password";
-                    var user = db.QueryFirstOrDefault<User>(sql, new { Username = username, Password = password });
+                    Username = txtUsername.Text.Trim(),
+                    Password = txtPassword.Text.Trim()
+                });
 
-                    if (user != null)
+                if (user != null)
+                {
+                    string role = user.role;
+                    string username = user.username;
+
+                    if (role == "Teacher")
                     {
-                        if (user.Role == "Teacher")
-                        {
-                            TeacherDashboard td = new TeacherDashboard();
-                            td.Show();
-                            this.Hide();
-                        }
-                        else if (user.Role == "Student")
-                        {
-                            StudentDashboard sd = new StudentDashboard();
-                            sd.Show();
-                            this.Hide();
-                        }
+                        TeacherDashboard td = new TeacherDashboard(username);
+                        td.Show();
                     }
-                    else
+                    else if (role == "Student")
                     {
-                        MessageBox.Show("Invalid username or password.", "Login Failed");
+                        StudentDashboard sd = new StudentDashboard(username);
+                        sd.Show();
                     }
+
+                    this.Hide();
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Invalid credentials.");
                 }
             }
+
+
         }
 
         private void btnShow_Click(object sender, EventArgs e)
