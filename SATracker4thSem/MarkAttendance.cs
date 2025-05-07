@@ -41,6 +41,18 @@ namespace SATracker4thSem
         private void MarkAttendance_Load(object sender, EventArgs e)
         {
             InitializeGrid();
+
+            // Disable Saturdays in the DateTimePicker
+            dateTimePicker.ValueChanged += (s, p) =>
+            {
+                if (dateTimePicker.Value.DayOfWeek == DayOfWeek.Saturday)
+                {
+                    MessageBox.Show("Saturday is a holiday. Please select a working day.");
+                    // Automatically move to next day (Sunday)
+                    dateTimePicker.Value = dateTimePicker.Value.AddDays(1);
+                }
+            };
+
         }
 
         private void InitializeGrid()
@@ -134,7 +146,10 @@ namespace SATracker4thSem
 
         private void btnSaveAttendance_Click(object sender, EventArgs e)
         {
+
             DateTime selectedDate = dateTimePicker.Value.Date;
+
+           
             string batch = cbBatch.SelectedItem?.ToString();
 
             if (string.IsNullOrEmpty(batch))
@@ -175,6 +190,7 @@ namespace SATracker4thSem
                             }
                         }
                     }
+                   
 
                     MessageBox.Show("Attendance saved successfully!");
                 }
@@ -236,5 +252,46 @@ namespace SATracker4thSem
                 MessageBox.Show("Error loading previous attendance: " + ex.Message);
             }
         }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+            DateTime selectedDate = dateTimePicker.Value.Date;
+
+            // Check for Saturday
+            if (selectedDate.DayOfWeek == DayOfWeek.Saturday)
+            {
+                MessageBox.Show("Saturday is a holiday. Attendance marking is disabled for this date.", "Holiday", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Check for holiday
+            if (IsHoliday(selectedDate))
+            {
+                MessageBox.Show("This date is marked as a holiday. Attendance marking is disabled.", "Holiday", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+        }
+
+        private bool IsHoliday(DateTime date)
+        {
+            bool isHoliday = false;
+            string connStr = "server=localhost;user=root;database=SATracker_db;password=;";
+
+            using (MySqlConnection conn = new MySqlConnection(connStr))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM Holidays WHERE HolidayDate = @date";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@date", date.Date);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    isHoliday = count > 0;
+                }
+            }
+
+            return isHoliday;
+        }
+
     }
 }
