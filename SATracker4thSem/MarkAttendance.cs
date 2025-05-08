@@ -32,15 +32,22 @@ namespace SATracker4thSem
             InitializeGrid();
 
             dateTimePicker.Value = _date;
-            cbBatch.SelectedItem = _batch; // triggers cbBatch_SelectedIndexChanged
+            cbBatch.SelectedItem = _batch;
 
-            // Delay loading until data is fully initialized
-            this.Shown += (s, e) => LoadPreviousAttendance();
+            if (cbBatch.SelectedItem != null)
+            {
+                // Manually trigger the logic to populate the students
+                cbBatch_SelectedIndexChanged(cbBatch, EventArgs.Empty);
+
+                // Now load previous attendance (AFTER rows are loaded)
+                LoadPreviousAttendance();
+            }
+
         }
 
         private void MarkAttendance_Load(object sender, EventArgs e)
         {
-            InitializeGrid();
+           
 
             // Disable Saturdays in the DateTimePicker
             dateTimePicker.ValueChanged += (s, p) =>
@@ -52,6 +59,8 @@ namespace SATracker4thSem
                     dateTimePicker.Value = dateTimePicker.Value.AddDays(1);
                 }
             };
+
+            
 
         }
 
@@ -292,6 +301,10 @@ namespace SATracker4thSem
 
             return isHoliday;
         }
+
+        
+        
+
 
     }
 }

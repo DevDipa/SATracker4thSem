@@ -37,6 +37,7 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnMyAttendannce = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtStudent = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.lblSlogan = new System.Windows.Forms.Label();
             this.pnlMain1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtStudent = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -147,13 +147,25 @@
             this.panel2.Size = new System.Drawing.Size(1134, 82);
             this.panel2.TabIndex = 1;
             // 
+            // txtStudent
+            // 
+            this.txtStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStudent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudent.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtStudent.Location = new System.Drawing.Point(989, 22);
+            this.txtStudent.Name = "txtStudent";
+            this.txtStudent.ReadOnly = true;
+            this.txtStudent.Size = new System.Drawing.Size(133, 34);
+            this.txtStudent.TabIndex = 7;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.CustomFormat = "hh:mm:ss tt";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(729, 26);
+            this.dateTimePicker1.Location = new System.Drawing.Point(692, 26);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 34);
             this.dateTimePicker1.TabIndex = 6;
@@ -163,7 +175,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(974, 17);
+            this.pictureBox3.Location = new System.Drawing.Point(927, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -213,18 +225,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // txtStudent
-            // 
-            this.txtStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStudent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudent.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtStudent.Location = new System.Drawing.Point(1030, 25);
-            this.txtStudent.Name = "txtStudent";
-            this.txtStudent.ReadOnly = true;
-            this.txtStudent.Size = new System.Drawing.Size(100, 34);
-            this.txtStudent.TabIndex = 7;
             // 
             // StudentDashboard
             // 
