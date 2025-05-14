@@ -1,6 +1,6 @@
 ﻿namespace SATracker4thSem
 {
-    partial class ForgotPasssword
+    partial class ForgotPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPasssword));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
             this.gbRole = new System.Windows.Forms.GroupBox();
             this.rbStudent = new System.Windows.Forms.RadioButton();
             this.rbTeacher = new System.Windows.Forms.RadioButton();

@@ -80,7 +80,7 @@ namespace SATracker4thSem
 
         private void linkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ForgotPasssword fm = new ForgotPasssword();
+            ForgotPassword fm = new ForgotPassword();
             fm.Show();
             this.Hide();
         }
