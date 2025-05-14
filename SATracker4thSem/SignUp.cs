@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper;
-using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
 namespace SATracker4thSem
@@ -75,23 +67,19 @@ namespace SATracker4thSem
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            // Trim inputs
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
             string confirmPassword = txtConfirmPassword.Text;
             string email = txtEmail.Text.Trim();
             string role = rbTeacher.Checked ? "Teacher" : rbStudent.Checked ? "Student" : "";
 
-            // --- Validation ---
-
-            // Role selection check
             if (string.IsNullOrEmpty(role))
             {
                 MessageBox.Show("Please select a role (Teacher or Student).", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Empty field checks
+           
             if (string.IsNullOrWhiteSpace(username) ||
                 string.IsNullOrWhiteSpace(password) ||
                 string.IsNullOrWhiteSpace(confirmPassword) ||
@@ -154,9 +142,6 @@ namespace SATracker4thSem
                     return;
                 }
 
-
-
-
                 // Insert new user
                 string insertQuery = @"INSERT INTO Users (username, password, role, email) 
                        VALUES (@Username, @Password, @Role, @Email)";
@@ -174,7 +159,7 @@ namespace SATracker4thSem
                     MessageBox.Show("Account created successfully! You can now log in.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoginForm loginForm = new LoginForm();
                     loginForm.Show();
-                    this.Hide(); // Close the SignUp form
+                    this.Hide();
                 }
                 else
                 {

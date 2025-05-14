@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper;
 
@@ -19,11 +12,6 @@ namespace SATracker4thSem
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
         {
 
         }
@@ -48,7 +36,7 @@ namespace SATracker4thSem
                     }
                     else
                     {
-                        ClearFields(); // optional, clears the fields
+                        ClearFields(); 
                     }
                 }
             }

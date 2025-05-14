@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SATracker4thSem
 {
@@ -22,36 +14,21 @@ namespace SATracker4thSem
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            this.pnlMain.Controls.Add(childForm);  // Make sure pnlMain is the name of the panel with the logo
+            this.pnlMain.Controls.Add(childForm);  
             this.pnlMain.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
 
-        private string _username; // Store the username for later use
-
+        //To store the username of the teacher
+        private string _username; 
         public TeacherDashboard(string username)
         {
             InitializeComponent();
             _username = username;
             txtTeacher.Text = _username;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             pbLogo.SendToBack();
@@ -99,15 +76,14 @@ namespace SATracker4thSem
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            // Confirm logout (optional but recommended)
+            
             var result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                // Open LoginForm in a new thread-safe context
-                this.Hide();  // Hide TeacherDashboard first
+                this.Hide();  
 
                 LoginForm loginForm = new LoginForm();
-                loginForm.FormClosed += (s, args) => this.Close(); // Ensure app closes if login form is closed
+                loginForm.FormClosed += (s, args) => this.Close(); 
                 loginForm.Show();
             }
         }

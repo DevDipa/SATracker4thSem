@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper; 
 
@@ -36,7 +29,7 @@ namespace SATracker4thSem
                     {
                         cbBatch.Text = student.batch;
                         txtFullName.Text = student.full_name;
-                        txtRollNo.Text = student.roll_no.ToString(); // editable if needed
+                        txtRollNo.Text = student.roll_no.ToString(); 
                         txtEmail.Text = student.email;
                         txtPhoneNo.Text = student.phone_no;
                     }

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 
 namespace SATracker4thSem
 {
@@ -28,7 +21,7 @@ namespace SATracker4thSem
             childForm.Show();
         }
 
-        private string _username; // Store the username for later use
+        private string _username; // Store the username of the Student 
         public StudentDashboard(string username)
         {
             InitializeComponent();
@@ -38,15 +31,15 @@ namespace SATracker4thSem
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            // Confirm logout (optional but recommended)
+            
             var result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                // Open LoginForm in a new thread-safe context
-                this.Hide();  // Hide TeacherDashboard first
+             
+                this.Hide(); 
 
                 LoginForm loginForm = new LoginForm();
-                loginForm.FormClosed += (s, args) => this.Close(); // Ensure app closes if login form is closed
+                loginForm.FormClosed += (s, args) => this.Close(); 
                 loginForm.Show();
             }
         }

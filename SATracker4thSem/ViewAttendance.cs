@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper;
 
@@ -131,7 +126,7 @@ namespace SATracker4thSem
                 var method = typeof(TeacherDashboard).GetMethod("OpenChildForm", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                 if (method != null)
                 {
-                    string batch = cbBatch.SelectedItem.ToString();  // assuming you have this
+                    string batch = cbBatch.SelectedItem.ToString();  
                     DateTime date = dateTimePicker1.Value;
 
                     method.Invoke(dashboard, new object[] { new MarkAttendance(batch, date) });

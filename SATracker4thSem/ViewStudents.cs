@@ -1,32 +1,20 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SATracker4thSem
 {
     public partial class ViewStudents : Form
     {
-        
-
-
-
         public ViewStudents()
         {
             InitializeComponent();
             cbBatch.SelectedIndexChanged += cbBatch_SelectedIndexChanged;
 
         }
-
-
-
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             Bitmap bm = new Bitmap(dataGridView1.Width, dataGridView1.Height);
@@ -50,17 +38,13 @@ namespace SATracker4thSem
             try
             {
 
-                cbBatch.SelectedIndex = 0; // Optional: default selection
+                cbBatch.SelectedIndex = 0;
 
-                // Enable automatic column generation
                 dataGridView1.AutoGenerateColumns = true;
 
                 // Clear previous data
                 dataGridView1.DataSource = null;
 
-                // Optional: load default batch students here
-                // string selectedBatch = cbBatch.SelectedItem.ToString();
-                // LoadStudentsByBatch(selectedBatch);
             }
             catch (Exception ex)
             {

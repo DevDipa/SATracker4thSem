@@ -38,8 +38,6 @@ namespace SATracker4thSem
             {
                 // Manually trigger the logic to populate the students
                 cbBatch_SelectedIndexChanged(cbBatch, EventArgs.Empty);
-
-                // Now load previous attendance (AFTER rows are loaded)
                 LoadPreviousAttendance();
             }
 
@@ -47,20 +45,17 @@ namespace SATracker4thSem
 
         private void MarkAttendance_Load(object sender, EventArgs e)
         {
-           
-
-            // Disable Saturdays in the DateTimePicker
             dateTimePicker.ValueChanged += (s, p) =>
             {
                 if (dateTimePicker.Value.DayOfWeek == DayOfWeek.Saturday)
                 {
                     MessageBox.Show("Saturday is a holiday. Please select a working day.");
-                    // Automatically move to next day (Sunday)
+
                     dateTimePicker.Value = dateTimePicker.Value.AddDays(1);
                 }
             };
 
-            
+
 
         }
 
@@ -110,7 +105,7 @@ namespace SATracker4thSem
                             int index = dataGridView1.Rows.Add();
                             dataGridView1.Rows[index].Cells["studentId"].Value = row["roll_no"];
                             dataGridView1.Rows[index].Cells["studentName"].Value = row["full_name"];
-                            dataGridView1.Rows[index].Cells["Status"].Value = ""; // initially blank
+                            dataGridView1.Rows[index].Cells["Status"].Value = "";
                         }
                     }
                 }
@@ -158,7 +153,7 @@ namespace SATracker4thSem
 
             DateTime selectedDate = dateTimePicker.Value.Date;
 
-           
+
             string batch = cbBatch.SelectedItem?.ToString();
 
             if (string.IsNullOrEmpty(batch))
@@ -199,7 +194,7 @@ namespace SATracker4thSem
                             }
                         }
                     }
-                   
+
 
                     MessageBox.Show("Attendance saved successfully!");
                 }
@@ -267,14 +262,14 @@ namespace SATracker4thSem
 
             DateTime selectedDate = dateTimePicker.Value.Date;
 
-            // Check for Saturday
+
             if (selectedDate.DayOfWeek == DayOfWeek.Saturday)
             {
                 MessageBox.Show("Saturday is a holiday. Attendance marking is disabled for this date.", "Holiday", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            // Check for holiday
+
             if (IsHoliday(selectedDate))
             {
                 MessageBox.Show("This date is marked as a holiday. Attendance marking is disabled.", "Holiday", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -301,10 +296,12 @@ namespace SATracker4thSem
 
             return isHoliday;
         }
-
-        
-        
-
-
     }
 }
+
+        
+        
+
+
+    
+

@@ -1,26 +1,15 @@
 ﻿using Dapper;
-using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SATracker4thSem
 {
     public partial class LoginForm : Form
     {
-        string connectionString = "Server=localhost;Database=SATracker_db;Uid=root;Pwd=;";
-
-        public LoginForm()
+        public LoginForm() 
         {
             InitializeComponent();
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             using (var conn = Database.GetConnection())
@@ -59,6 +48,8 @@ namespace SATracker4thSem
 
         }
 
+        //Password show/hide logic
+
         private void btnShow_Click(object sender, EventArgs e)
         {
             if(txtPassword.PasswordChar=='*')
@@ -91,6 +82,7 @@ namespace SATracker4thSem
         {
             ForgotPasssword fm = new ForgotPasssword();
             fm.Show();
+            this.Hide();
         }
     }
 }

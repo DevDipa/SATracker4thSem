@@ -1,12 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SATracker4thSem
@@ -20,15 +13,10 @@ namespace SATracker4thSem
             InitializeComponent();
             txtMyRollNo.KeyPress += txtMyRollNo_KeyPress;
             txtMyRollNo.TextChanged += tbRollNotobeUpdated_TextChanged;
-
-
-
         }
 
         private void tbRollNotobeUpdated_TextChanged(object sender, EventArgs e)
-        {
-
-            // Clear other fields to avoid showing stale data
+        { 
             txtFullName.Clear();
             txtBatch.Clear();
             txtEmail.Clear();
