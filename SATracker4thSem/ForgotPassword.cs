@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace SATracker4thSem
 {
-    public partial class ForgotPasssword : Form
+    public partial class ForgotPassword : Form
     {
-        public ForgotPasssword()
+        public ForgotPassword()
         {
             InitializeComponent();
         }

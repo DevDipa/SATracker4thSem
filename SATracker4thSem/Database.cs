@@ -3,10 +3,10 @@ using System.Data;
 
 public static class Database
 {
-    private static string connectionString = "server=localhost;uid=root;pwd=;database=SATracker_db;";
-
-    public static IDbConnection GetConnection()
+    public static MySqlConnection GetConnection()
     {
+        string connectionString = "server=localhost;uid=root;pwd=;database=SATracker_db;";
         return new MySqlConnection(connectionString);
     }
+
 }

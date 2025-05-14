@@ -120,11 +120,11 @@
     <Compile Include="DeleteStudent.Designer.cs">
       <DependentUpon>DeleteStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForgotPasssword.cs">
+    <Compile Include="ForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPasssword.Designer.cs">
-      <DependentUpon>ForgotPasssword.cs</DependentUpon>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -199,8 +199,8 @@
     <EmbeddedResource Include="DeleteStudent.resx">
       <DependentUpon>DeleteStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForgotPasssword.resx">
-      <DependentUpon>ForgotPasssword.cs</DependentUpon>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
