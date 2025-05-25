@@ -47,6 +47,7 @@
             this.btnHide = new System.Windows.Forms.Button();
             this.gbRole = new System.Windows.Forms.GroupBox();
             this.rbStudent = new System.Windows.Forms.RadioButton();
+            this.btnClose = new System.Windows.Forms.Button();
             this.gbRole.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,11 +122,11 @@
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.txtUsername.Location = new System.Drawing.Point(130, 277);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(454, 41);
+            this.txtUsername.Size = new System.Drawing.Size(454, 49);
             this.txtUsername.TabIndex = 10;
             // 
             // btnSubmit
@@ -155,10 +156,11 @@
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.txtEmail.Location = new System.Drawing.Point(131, 599);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(454, 41);
+            this.txtEmail.Size = new System.Drawing.Size(454, 49);
             this.txtEmail.TabIndex = 15;
             // 
             // btnShow
@@ -178,7 +180,7 @@
             this.txtPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.txtPassword.Location = new System.Drawing.Point(129, 382);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -190,7 +192,7 @@
             this.txtConfirmPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.txtConfirmPassword.Location = new System.Drawing.Point(132, 485);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
@@ -262,11 +264,28 @@
             this.rbStudent.Text = "Student";
             this.rbStudent.UseVisualStyleBackColor = false;
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnClose.Location = new System.Drawing.Point(747, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(47, 41);
+            this.btnClose.TabIndex = 23;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 776);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.gbRole);
             this.Controls.Add(this.btnShowC);
             this.Controls.Add(this.txtEmail);
@@ -315,5 +334,6 @@
         private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.GroupBox gbRole;
         private System.Windows.Forms.RadioButton rbStudent;
+        private System.Windows.Forms.Button btnClose;
     }
 }

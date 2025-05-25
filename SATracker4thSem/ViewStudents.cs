@@ -59,15 +59,12 @@ namespace SATracker4thSem
             LoadStudentsByBatch(selectedBatch);
         }
 
-       
+
         private void LoadStudentsByBatch(string batch)
         {
             try
             {
-
-                string connectionString = "server=localhost;uid=root;pwd=;database=SATracker_db;";
-
-                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                using (MySqlConnection conn = Database.GetConnection())
                 {
                     conn.Open();
                     string query = "SELECT roll_no AS 'Roll No.', full_name AS 'Name', email AS 'Email', phone_no AS 'Phone No.' FROM Students WHERE batch = @batch";
@@ -85,9 +82,10 @@ namespace SATracker4thSem
             {
                 MessageBox.Show("Error loading students: " + ex.Message);
             }
-
-
         }
 
+
     }
+
 }
+

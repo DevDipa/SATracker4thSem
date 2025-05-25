@@ -47,6 +47,7 @@
             this.btnHide = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.gbRole.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,11 +123,11 @@
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.txtUsername.Location = new System.Drawing.Point(133, 285);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(454, 41);
+            this.txtUsername.Size = new System.Drawing.Size(454, 49);
             this.txtUsername.TabIndex = 28;
             // 
             // label6
@@ -200,7 +201,7 @@
             this.txtConfirmPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.txtConfirmPassword.Location = new System.Drawing.Point(135, 601);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
@@ -225,7 +226,7 @@
             this.txtNewPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPassword.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtNewPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.txtNewPassword.Location = new System.Drawing.Point(136, 490);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
@@ -247,10 +248,11 @@
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.txtEmail.Location = new System.Drawing.Point(132, 387);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(454, 41);
+            this.txtEmail.Size = new System.Drawing.Size(454, 49);
             this.txtEmail.TabIndex = 40;
             // 
             // label7
@@ -263,11 +265,28 @@
             this.label7.TabIndex = 39;
             this.label7.Text = "Email";
             // 
-            // ForgotPasssword
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnClose.Location = new System.Drawing.Point(745, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(47, 41);
+            this.btnClose.TabIndex = 41;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            // 
+            // ForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 776);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.gbRole);
@@ -285,7 +304,7 @@
             this.Controls.Add(this.btnHideC);
             this.Controls.Add(this.txtConfirmPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ForgotPasssword";
+            this.Name = "ForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForgotPasssword";
             this.gbRole.ResumeLayout(false);
@@ -315,5 +334,6 @@
         private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnClose;
     }
 }

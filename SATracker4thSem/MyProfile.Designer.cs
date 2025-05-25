@@ -42,6 +42,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnView = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.txtMyRollNo);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(0, 96);
@@ -192,6 +194,20 @@
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
+            this.btnView.Location = new System.Drawing.Point(849, 21);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(46, 41);
+            this.btnView.TabIndex = 2;
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
             // MyProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -235,5 +251,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPhoneNo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnView;
     }
 }

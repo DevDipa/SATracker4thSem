@@ -74,10 +74,10 @@ namespace SATracker4thSem
             }
 
             // Phone number validation
-            string phonePattern = @"^\d{10}$";
+            string phonePattern = @"^9[78][0-9]{8}$";
             if (!Regex.IsMatch(txtPhoneNo.Text.Trim(), phonePattern))
             {
-                MessageBox.Show("Phone number must be 10 digits long and contain only numbers.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Phone number must be 10 digits long, starting with 9, followed by 7 or 8 at the second place, and contain only numbers.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

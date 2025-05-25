@@ -27,12 +27,16 @@ namespace SATracker4thSem
                 return;
             }
 
-            int rollNo = int.Parse(txtMyRollNo.Text);
-            string batch = cbBatch.Text;
+            if (!int.TryParse(txtMyRollNo.Text, out int rollNo))
+            {
+                MessageBox.Show("Invalid Roll Number. Please enter a numeric value.");
+                return;
+            }
 
+            string batch = cbBatch.Text;
             dataGridView1.Rows.Clear();
 
-            using (MySqlConnection con = new MySqlConnection(connectionString))
+            using (MySqlConnection con = Database.GetConnection()) 
             {
                 string query = @"
             SELECT 
@@ -75,6 +79,7 @@ namespace SATracker4thSem
                 }
             }
         }
+
 
 
         private void MyAttendance_Load(object sender, EventArgs e)

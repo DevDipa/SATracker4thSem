@@ -6,7 +6,7 @@ namespace SATracker4thSem
 {
     public partial class MyProfile : Form
     {
-       
+
 
         public MyProfile()
         {
@@ -16,6 +16,28 @@ namespace SATracker4thSem
         }
 
         private void tbRollNotobeUpdated_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMyRollNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtMyRollNo_Leave(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
         {
             txtFullName.Clear();
             txtBatch.Clear();
@@ -47,7 +69,7 @@ namespace SATracker4thSem
                         }
                         else
                         {
-                            // Optional: Show message if no record is found
+
                             MessageBox.Show("No student found with that Roll No.");
                         }
                     }
@@ -57,23 +79,6 @@ namespace SATracker4thSem
             {
                 MessageBox.Show("Error fetching profile: " + ex.Message);
             }
-        }
-
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMyRollNo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void txtMyRollNo_Leave(object sender, EventArgs e)
-        {
-
-            
         }
     }
 }

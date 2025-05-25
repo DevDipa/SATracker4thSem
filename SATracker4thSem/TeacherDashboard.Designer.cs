@@ -40,6 +40,7 @@
             this.btnViewAttendance = new System.Windows.Forms.Button();
             this.btnMarkAttendance = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtTeacher = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +48,7 @@
             this.lblSlogan = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtTeacher = new System.Windows.Forms.TextBox();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -202,6 +203,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.txtTeacher);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -212,13 +214,25 @@
             this.panel2.Size = new System.Drawing.Size(1435, 82);
             this.panel2.TabIndex = 1;
             // 
+            // txtTeacher
+            // 
+            this.txtTeacher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTeacher.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTeacher.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTeacher.Location = new System.Drawing.Point(1228, 24);
+            this.txtTeacher.Name = "txtTeacher";
+            this.txtTeacher.ReadOnly = true;
+            this.txtTeacher.Size = new System.Drawing.Size(128, 34);
+            this.txtTeacher.TabIndex = 6;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.CustomFormat = " hh:mm:ss tt";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(978, 28);
+            this.dateTimePicker1.Location = new System.Drawing.Point(943, 26);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(206, 34);
             this.dateTimePicker1.TabIndex = 5;
@@ -228,9 +242,9 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1239, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1172, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -281,17 +295,21 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // txtTeacher
+            // btnExit
             // 
-            this.txtTeacher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTeacher.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeacher.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtTeacher.Location = new System.Drawing.Point(1295, 24);
-            this.txtTeacher.Name = "txtTeacher";
-            this.txtTeacher.ReadOnly = true;
-            this.txtTeacher.Size = new System.Drawing.Size(128, 34);
-            this.txtTeacher.TabIndex = 6;
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnExit.Location = new System.Drawing.Point(1388, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(47, 37);
+            this.btnExit.TabIndex = 13;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseEnter += new System.EventHandler(this.btnExit_MouseEnter);
+            this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
             // 
             // TeacherDashboard
             // 
@@ -340,5 +358,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.TextBox txtTeacher;
+        private System.Windows.Forms.Button btnExit;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace SATracker4thSem
 {
@@ -112,6 +113,23 @@ namespace SATracker4thSem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnExit_MouseEnter(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.Firebrick;
+            btnExit.ForeColor = SystemColors.Control ;
+        }
+
+        private void btnExit_MouseLeave(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.FromArgb(110, 89, 165) ;
+            btnExit.ForeColor = SystemColors.Control;
         }
     }
 }

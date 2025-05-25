@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using System;
+using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -127,6 +128,26 @@ namespace SATracker4thSem
             }
         }
 
-    
-}
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+
+            LoginForm loginForm = new LoginForm();
+            loginForm.FormClosed += (s, args) => this.Close();
+            loginForm.Show();
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Firebrick;
+            btnClose.ForeColor = Color.White;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.FromArgb(110, 89, 165);
+            btnClose.ForeColor = SystemColors.Control;
+        }
+    }
 }

@@ -42,6 +42,7 @@
             this.btnHide = new System.Windows.Forms.Button();
             this.linkSignUp = new System.Windows.Forms.LinkLabel();
             this.linkForgotPassword = new System.Windows.Forms.LinkLabel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -91,11 +92,11 @@
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.Control;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.txtUsername.Location = new System.Drawing.Point(132, 211);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(539, 41);
+            this.txtUsername.Size = new System.Drawing.Size(539, 49);
             this.txtUsername.TabIndex = 4;
             // 
             // txtPassword
@@ -103,7 +104,7 @@
             this.txtPassword.BackColor = System.Drawing.SystemColors.Control;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
             this.txtPassword.Location = new System.Drawing.Point(132, 330);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -178,11 +179,28 @@
             this.linkForgotPassword.Text = "Forgot Password?";
             this.linkForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgotPassword_LinkClicked);
             // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnExit.Location = new System.Drawing.Point(764, -1);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(47, 41);
+            this.btnExit.TabIndex = 11;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.button1_Click);
+            this.btnExit.MouseEnter += new System.EventHandler(this.btnExit_MouseEnter);
+            this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 630);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.linkForgotPassword);
             this.Controls.Add(this.linkSignUp);
             this.Controls.Add(this.btnLogin);
@@ -217,6 +235,7 @@
         private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.LinkLabel linkSignUp;
         private System.Windows.Forms.LinkLabel linkForgotPassword;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 
