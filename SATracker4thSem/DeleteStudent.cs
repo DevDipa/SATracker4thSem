@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Dapper;
+using System.Drawing;
 
 namespace SATracker4thSem
 {
@@ -106,6 +107,16 @@ namespace SATracker4thSem
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDelete_MouseEnter(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.MediumPurple;
+        }
+
+        private void btnDelete_MouseLeave(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.FromArgb(110, 89, 165);
         }
     }
 }

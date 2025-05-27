@@ -132,6 +132,8 @@
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -142,6 +144,8 @@
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.btnSubmit.MouseEnter += new System.EventHandler(this.btnSubmit_MouseEnter);
+            this.btnSubmit.MouseLeave += new System.EventHandler(this.btnSubmit_MouseLeave);
             // 
             // label7
             // 
@@ -166,6 +170,7 @@
             // btnShow
             // 
             this.btnShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnShow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
             this.btnShow.Location = new System.Drawing.Point(513, 382);
@@ -203,6 +208,7 @@
             // btnShowC
             // 
             this.btnShowC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnShowC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowC.Image = ((System.Drawing.Image)(resources.GetObject("btnShowC.Image")));
             this.btnShowC.Location = new System.Drawing.Point(513, 485);
@@ -266,15 +272,15 @@
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClose.Location = new System.Drawing.Point(747, 0);
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(0, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(47, 41);
+            this.btnClose.Size = new System.Drawing.Size(56, 44);
             this.btnClose.TabIndex = 23;
-            this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnExit_Click);
             this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
@@ -302,11 +308,11 @@
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnHide);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
-            this.Load += new System.EventHandler(this.SignUp_Load);
             this.gbRole.ResumeLayout(false);
             this.gbRole.PerformLayout();
             this.ResumeLayout(false);

@@ -52,10 +52,12 @@
             // 
             // cbBatch
             // 
+            this.cbBatch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbBatch.FormattingEnabled = true;
             this.cbBatch.Items.AddRange(new object[] {
+            "",
             "BCA - I",
             "BCA - II",
             "BCA - III",
@@ -97,7 +99,8 @@
             // 
             this.btnPrintRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.btnPrintRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintRecord.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrintRecord.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPrintRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintRecord.ForeColor = System.Drawing.SystemColors.Control;
             this.btnPrintRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintRecord.Image")));
@@ -109,6 +112,8 @@
             this.btnPrintRecord.Text = "Print Record";
             this.btnPrintRecord.UseVisualStyleBackColor = false;
             this.btnPrintRecord.Click += new System.EventHandler(this.btnPrintRecord_Click);
+            this.btnPrintRecord.MouseEnter += new System.EventHandler(this.btnPrintRecord_MouseEnter);
+            this.btnPrintRecord.MouseLeave += new System.EventHandler(this.btnPrintRecord_MouseLeave);
             // 
             // ViewStudents
             // 

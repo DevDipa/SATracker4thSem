@@ -126,5 +126,25 @@ namespace SATracker4thSem
             previewDialog.Document = printDoc;
             previewDialog.ShowDialog();
         }
+
+        private void btnLoadAttendance1_MouseEnter(object sender, EventArgs e)
+        {
+            btnLoadAttendance1.BackColor = Color.MediumPurple;
+        }
+
+        private void btnLoadAttendance1_MouseLeave(object sender, EventArgs e)
+        {
+            btnLoadAttendance1.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnPrintAttendance1_MouseEnter(object sender, EventArgs e)
+        {
+            btnPrintAttendance1.BackColor = Color.MediumPurple;
+        }
+
+        private void btnPrintAttendance1_MouseLeave(object sender, EventArgs e)
+        {
+            btnPrintAttendance1.BackColor = Color.FromArgb(110, 89, 165);
+        }
     }
 }

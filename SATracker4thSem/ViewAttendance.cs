@@ -138,5 +138,30 @@ namespace SATracker4thSem
                 MessageBox.Show("Parent dashboard not found. Cannot open MarkAttendance.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void cbBatch_MouseEnter(object sender, EventArgs e)
+        {
+            cbBatch.BackColor = Color.MediumPurple;
+        }
+
+        private void btnUpdateDetails_MouseEnter(object sender, EventArgs e)
+        {
+            btnPrintAttendance.BackColor = Color.MediumPurple;
+        }
+
+        private void btnUpdateDetails_MouseLeave(object sender, EventArgs e)
+        {
+            btnPrintAttendance.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnPrintAttendance_MouseEnter(object sender, EventArgs e)
+        {
+            btnPrintAttendance.BackColor = Color.MediumPurple;
+        }
+
+        private void btnPrintAttendance_MouseLeave(object sender, EventArgs e)
+        {
+            btnPrintAttendance.BackColor = Color.FromArgb(110, 89, 165);
+        }
     }
 }

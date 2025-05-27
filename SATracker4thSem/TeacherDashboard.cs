@@ -131,5 +131,110 @@ namespace SATracker4thSem
             btnExit.BackColor = Color.FromArgb(110, 89, 165) ;
             btnExit.ForeColor = SystemColors.Control;
         }
+
+        private void btnDashboard_MouseHover(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.MediumPurple;
+        }
+
+        private void btnMarkAttendance_MouseEnter(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.MediumPurple;
+        }
+
+        private void btnDashboard_MouseEnter(object sender, EventArgs e)
+        {
+            btnDashboard.BackColor = Color.MediumPurple;
+        }
+
+        private void btnDashboard_MouseLeave(object sender, EventArgs e)
+        {
+            btnDashboard.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnMarkAttendance_MouseEnter_1(object sender, EventArgs e)
+        {
+            btnMarkAttendance.BackColor = Color.MediumPurple;
+        }
+
+        private void btnMarkAttendance_MouseLeave(object sender, EventArgs e)
+        {
+            btnMarkAttendance.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnViewAttendance_MouseEnter(object sender, EventArgs e)
+        {
+            btnViewAttendance.BackColor = Color.MediumPurple;
+        }
+
+        private void btnViewAttendance_MouseLeave(object sender, EventArgs e)
+        {
+            btnViewAttendance.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnViewStudents_MouseEnter(object sender, EventArgs e)
+        {
+            btnViewStudents.BackColor = Color.MediumPurple;
+        }
+
+        private void btnViewStudents_MouseLeave(object sender, EventArgs e)
+        {
+            btnViewStudents.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnAddStudent_MouseEnter(object sender, EventArgs e)
+        {
+            btnAddStudent.BackColor = Color.MediumPurple;
+        }
+
+        private void btnAddStudent_MouseLeave(object sender, EventArgs e)
+        {
+            btnAddStudent.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnUpdateStudent_MouseEnter(object sender, EventArgs e)
+        {
+            btnUpdateStudent.BackColor = Color.MediumPurple;
+        }
+
+        private void btnUpdateStudent_MouseLeave(object sender, EventArgs e)
+        {
+            btnUpdateStudent.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnDeleteStudent_MouseEnter(object sender, EventArgs e)
+        {
+            btnDeleteStudent.BackColor = Color.MediumPurple;
+        }
+
+        private void btnDeleteStudent_MouseLeave(object sender, EventArgs e)
+        {
+            btnDeleteStudent.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnLogOut_MouseEnter(object sender, EventArgs e)
+        {
+            btnLogOut.BackColor = Color.MediumPurple;
+        }
+
+        private void btnLogOut_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogOut.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.Firebrick;
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

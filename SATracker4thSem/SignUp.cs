@@ -13,11 +13,6 @@ namespace SATracker4thSem
             InitializeComponent();
         }
 
-        private void SignUp_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnShow_Click(object sender, EventArgs e)
         {
             if (txtPassword.PasswordChar == '*')
@@ -99,7 +94,7 @@ namespace SATracker4thSem
             }
 
             // Password strength (min 6 chars, 1 uppercase, 1 digit)
-            string passwordPattern = @"^(?=.*[A-Z])(?=.*\d).{6,}$";
+            string passwordPattern = @"^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!#@+-_]).{6,}$";
             if (!Regex.IsMatch(password, passwordPattern))
             {
                 MessageBox.Show("Password must be at least 6 characters and include 1 uppercase letter and 1 number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -114,7 +109,7 @@ namespace SATracker4thSem
             }
 
             // Email format validation
-            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            string emailPattern = @"^[a-zA-Z0-9_+-.%$]+@[a-zA-z0-9-]+\.[a-zA-Z]{2,}$";
             if (!Regex.IsMatch(email, emailPattern))
             {
                 MessageBox.Show("Enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -189,6 +184,16 @@ namespace SATracker4thSem
         {
             btnClose.BackColor = Color.FromArgb(110, 89, 165);
             btnClose.ForeColor = SystemColors.Control;
+        }
+
+        private void btnSubmit_MouseEnter(object sender, EventArgs e)
+        {
+            btnShow.BackColor = Color.MediumPurple;
+        }
+
+        private void btnSubmit_MouseLeave(object sender, EventArgs e)
+        {
+            btnShow.BackColor = Color.FromArgb(110, 89, 165);
         }
     }
 }

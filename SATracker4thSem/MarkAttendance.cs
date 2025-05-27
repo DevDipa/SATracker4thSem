@@ -296,6 +296,16 @@ namespace SATracker4thSem
 
             return isHoliday;
         }
+
+        private void btnSaveAttendance_MouseEnter(object sender, EventArgs e)
+        {
+            btnSaveAttendance.BackColor = Color.MediumPurple;
+        }
+
+        private void btnSaveAttendance_MouseLeave(object sender, EventArgs e)
+        {
+            btnSaveAttendance.BackColor = Color.FromArgb(110, 89, 165); 
+        }
     }
 }
 

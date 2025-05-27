@@ -84,7 +84,15 @@ namespace SATracker4thSem
             }
         }
 
+        private void btnPrintRecord_MouseEnter(object sender, EventArgs e)
+        {
+            btnPrintRecord.BackColor = Color.MediumPurple;
+        }
 
+        private void btnPrintRecord_MouseLeave(object sender, EventArgs e)
+        {
+            btnPrintRecord.BackColor = Color.FromArgb(110, 89, 165); 
+        }
     }
 
 }

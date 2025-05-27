@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Dapper; 
+using System.Drawing;
 
 namespace SATracker4thSem
 {
@@ -66,7 +67,7 @@ namespace SATracker4thSem
             }
 
             // Email format validation
-            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            string emailPattern = @"^[a-zA-Z0-9_+-.%$]+@[a-zA-z0-9-]+\.[a-zA-Z]{2,}$"; 
             if (!Regex.IsMatch(txtEmail.Text.Trim(), emailPattern))
             {
                 MessageBox.Show("Please enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -149,6 +150,16 @@ namespace SATracker4thSem
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUpdate_MouseEnter(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.MediumPurple;
+        }
+
+        private void btnUpdate_MouseLeave(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.FromArgb(110, 89, 165); 
         }
     }
 }

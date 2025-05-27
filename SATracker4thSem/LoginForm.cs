@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using System;
+using System;    
 using System.Windows.Forms;
 using System.Drawing;
 
@@ -102,6 +102,46 @@ namespace SATracker4thSem
 
             btnExit.BackColor = Color.FromArgb(110, 89, 165); 
             btnExit.ForeColor = SystemColors.Control;
+        }
+
+        private void btnLogin_MouseEnter(object sender, EventArgs e)
+        {
+            btnLogin.BackColor = Color.MediumPurple;
+        }
+
+        private void btnLogin_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogin.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnExit_MouseEnter_1(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.Firebrick;
+        }
+
+        private void btnExit_MouseLeave_1(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.Firebrick;
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.FromArgb(110, 89, 165);
         }
     }
 }

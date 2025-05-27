@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyAttendance));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPrintAttendance = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtMyRollNo = new System.Windows.Forms.TextBox();
@@ -103,6 +103,8 @@
             // cbBatch
             // 
             this.cbBatch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cbBatch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbBatch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -172,22 +174,22 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 193);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1110, 481);
             this.dataGridView1.TabIndex = 37;
@@ -214,6 +216,7 @@
             // 
             this.btnPrintAttendance1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintAttendance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnPrintAttendance1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrintAttendance1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintAttendance1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintAttendance1.ForeColor = System.Drawing.SystemColors.Control;
@@ -226,12 +229,15 @@
             this.btnPrintAttendance1.Text = "Print Attendance";
             this.btnPrintAttendance1.UseVisualStyleBackColor = false;
             this.btnPrintAttendance1.Click += new System.EventHandler(this.btnPrintAttendance1_Click);
+            this.btnPrintAttendance1.MouseEnter += new System.EventHandler(this.btnPrintAttendance1_MouseEnter);
+            this.btnPrintAttendance1.MouseLeave += new System.EventHandler(this.btnPrintAttendance1_MouseLeave);
             // 
             // btnLoadAttendance1
             // 
             this.btnLoadAttendance1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLoadAttendance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.btnLoadAttendance1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadAttendance1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadAttendance1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoadAttendance1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadAttendance1.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLoadAttendance1.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadAttendance1.Image")));
@@ -243,6 +249,8 @@
             this.btnLoadAttendance1.Text = "Load Attendance";
             this.btnLoadAttendance1.UseVisualStyleBackColor = false;
             this.btnLoadAttendance1.Click += new System.EventHandler(this.btnLoadAttendance1_Click);
+            this.btnLoadAttendance1.MouseEnter += new System.EventHandler(this.btnLoadAttendance1_MouseEnter);
+            this.btnLoadAttendance1.MouseLeave += new System.EventHandler(this.btnLoadAttendance1_MouseLeave);
             // 
             // MyAttendance
             // 

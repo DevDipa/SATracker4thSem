@@ -69,6 +69,7 @@
             // 
             // cbBatch
             // 
+            this.cbBatch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBatch.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -157,7 +158,8 @@
             // 
             this.btnSaveAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
-            this.btnSaveAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveAttendance.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSaveAttendance.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveAttendance.Image")));
@@ -169,6 +171,8 @@
             this.btnSaveAttendance.Text = "Save Attendance";
             this.btnSaveAttendance.UseVisualStyleBackColor = false;
             this.btnSaveAttendance.Click += new System.EventHandler(this.btnSaveAttendance_Click);
+            this.btnSaveAttendance.MouseEnter += new System.EventHandler(this.btnSaveAttendance_MouseEnter);
+            this.btnSaveAttendance.MouseLeave += new System.EventHandler(this.btnSaveAttendance_MouseLeave);
             // 
             // MarkAttendance
             // 

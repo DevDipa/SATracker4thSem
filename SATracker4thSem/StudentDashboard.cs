@@ -88,5 +88,60 @@ namespace SATracker4thSem
             btnExit.BackColor = Color.FromArgb(110, 89, 165);
             btnExit.ForeColor = SystemColors.Control;
         }
+
+        private void btnDashboard_MouseEnter(object sender, EventArgs e)
+        {
+            btnDashboard.BackColor = Color.MediumPurple;
+        }
+
+        private void btnDashboard_MouseLeave(object sender, EventArgs e)
+        {
+            btnDashboard.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnMyProfile_MouseEnter(object sender, EventArgs e)
+        {
+            btnMyProfile.BackColor = Color.MediumPurple;
+        }
+
+        private void btnMyProfile_MouseLeave(object sender, EventArgs e)
+        {
+            btnMyProfile.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnMyAttendannce_MouseEnter(object sender, EventArgs e)
+        {
+            btnMyAttendannce.BackColor = Color.MediumPurple;
+        }
+
+        private void btnMyAttendannce_MouseLeave(object sender, EventArgs e)
+        {
+            btnMyAttendannce.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnLogOut_MouseEnter(object sender, EventArgs e)
+        {
+            btnLogOut.BackColor = Color.MediumPurple;
+        }
+
+        private void btnLogOut_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogOut.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.Firebrick;
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

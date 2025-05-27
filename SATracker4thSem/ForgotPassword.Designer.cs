@@ -97,6 +97,7 @@
             // btnShowC
             // 
             this.btnShowC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnShowC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowC.Image = ((System.Drawing.Image)(resources.GetObject("btnShowC.Image")));
             this.btnShowC.Location = new System.Drawing.Point(516, 601);
@@ -109,6 +110,8 @@
             // btnResetPassword
             // 
             this.btnResetPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnResetPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnResetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetPassword.ForeColor = System.Drawing.SystemColors.Control;
             this.btnResetPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,6 +122,8 @@
             this.btnResetPassword.Text = "Reset";
             this.btnResetPassword.UseVisualStyleBackColor = false;
             this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
+            this.btnResetPassword.MouseEnter += new System.EventHandler(this.btnResetPassword_MouseEnter);
+            this.btnResetPassword.MouseLeave += new System.EventHandler(this.btnResetPassword_MouseLeave);
             // 
             // txtUsername
             // 
@@ -207,11 +212,11 @@
             this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(456, 49);
             this.txtConfirmPassword.TabIndex = 34;
-            this.txtConfirmPassword.TextChanged += new System.EventHandler(this.txtConfirmPassword_TextChanged);
             // 
             // btnShow
             // 
             this.btnShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnShow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
             this.btnShow.Location = new System.Drawing.Point(516, 490);
@@ -269,13 +274,14 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(89)))), ((int)(((byte)(165)))));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClose.Location = new System.Drawing.Point(745, 0);
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(1, -2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(47, 41);
+            this.btnClose.Size = new System.Drawing.Size(58, 47);
             this.btnClose.TabIndex = 41;
-            this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
@@ -303,6 +309,7 @@
             this.Controls.Add(this.btnShowC);
             this.Controls.Add(this.btnHideC);
             this.Controls.Add(this.txtConfirmPassword);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
