@@ -86,7 +86,6 @@
             this.txtMyRollNo.TabIndex = 1;
             this.txtMyRollNo.TextChanged += new System.EventHandler(this.tbRollNotobeUpdated_TextChanged);
             this.txtMyRollNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMyRollNo_KeyPress);
-            this.txtMyRollNo.Leave += new System.EventHandler(this.txtMyRollNo_Leave);
             // 
             // label7
             // 
@@ -98,7 +97,6 @@
             this.label7.Size = new System.Drawing.Size(268, 36);
             this.label7.TabIndex = 0;
             this.label7.Text = "Enter your roll no. :";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label1
             // 

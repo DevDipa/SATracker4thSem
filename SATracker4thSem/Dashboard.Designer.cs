@@ -41,6 +41,7 @@
             this.gbLate = new System.Windows.Forms.GroupBox();
             this.txtLateToday = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.gbTotal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbPresent.SuspendLayout();
@@ -76,7 +77,6 @@
             this.txtTotalStudents.Size = new System.Drawing.Size(169, 34);
             this.txtTotalStudents.TabIndex = 1;
             this.txtTotalStudents.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTotalStudents.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -113,7 +113,6 @@
             this.txtPresentToday.Size = new System.Drawing.Size(169, 34);
             this.txtPresentToday.TabIndex = 2;
             this.txtPresentToday.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPresentToday.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox4
             // 
@@ -197,6 +196,13 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // mySqlDataAdapter1
+            // 
+            this.mySqlDataAdapter1.DeleteCommand = null;
+            this.mySqlDataAdapter1.InsertCommand = null;
+            this.mySqlDataAdapter1.SelectCommand = null;
+            this.mySqlDataAdapter1.UpdateCommand = null;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -241,5 +247,6 @@
         private System.Windows.Forms.TextBox txtPresentToday;
         private System.Windows.Forms.TextBox txtAbsentToday;
         private System.Windows.Forms.TextBox txtLateToday;
+        private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
     }
 }

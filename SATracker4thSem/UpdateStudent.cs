@@ -142,24 +142,24 @@ namespace SATracker4thSem
             txtPhoneNo.Clear();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnUpdate_MouseEnter_1(object sender, EventArgs e)
         {
-
+            btnUpdate.BackColor = Color.MediumPurple;
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void btnUpdate_MouseLeave_1(object sender, EventArgs e)
         {
-
+            btnUpdate.BackColor = Color.FromArgb(110, 89, 165); 
         }
 
-        private void btnUpdate_MouseEnter(object sender, EventArgs e)
+        private void btnExit_MouseEnter(object sender, EventArgs e)
         {
             btnExit.BackColor = Color.MediumPurple;
         }
 
-        private void btnUpdate_MouseLeave(object sender, EventArgs e)
+        private void btnExit_MouseLeave(object sender, EventArgs e)
         {
-            btnExit.BackColor = Color.FromArgb(110, 89, 165); 
+            btnExit.BackColor = SystemColors.ButtonHighlight;
         }
     }
 }

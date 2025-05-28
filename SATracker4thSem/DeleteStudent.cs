@@ -89,34 +89,24 @@ namespace SATracker4thSem
             this.Close();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void btnDelete_MouseEnter_1(object sender, EventArgs e)
         {
-
+            btnDelete.BackColor = Color.MediumPurple;
         }
 
-        private void DeleteStudent_Load(object sender, EventArgs e)
+        private void btnDelete_MouseLeave_1(object sender, EventArgs e)
         {
-
+            btnDelete.BackColor = Color.FromArgb(110, 89, 165);
         }
 
-        private void cbBatch_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDelete_MouseEnter(object sender, EventArgs e)
+        private void btnExit_MouseEnter(object sender, EventArgs e)
         {
             btnExit.BackColor = Color.MediumPurple;
         }
 
-        private void btnDelete_MouseLeave(object sender, EventArgs e)
+        private void btnExit_MouseLeave(object sender, EventArgs e)
         {
-            btnExit.BackColor = Color.FromArgb(110, 89, 165);
+            btnExit.BackColor = SystemColors.ButtonHighlight;
         }
     }
 }

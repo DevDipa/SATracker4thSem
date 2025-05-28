@@ -22,12 +22,10 @@ namespace SATracker4thSem
             childForm.Show();
         }
 
-        private string _username; // Store the username of the Student 
         public StudentDashboard(string username)
         {
             InitializeComponent();
-            _username = username;
-            txtStudent.Text = _username;
+            txtStudent.Text = username;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

@@ -65,15 +65,5 @@ namespace SATracker4thSem
                 txtLateToday.Text = count.ToString();
             }
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

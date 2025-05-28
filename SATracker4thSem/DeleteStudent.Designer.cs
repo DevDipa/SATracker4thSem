@@ -75,6 +75,8 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseEnter += new System.EventHandler(this.btnExit_MouseEnter);
+            this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
             // 
             // btnDelete
             // 
@@ -91,8 +93,8 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            this.btnDelete.MouseEnter += new System.EventHandler(this.btnDelete_MouseEnter);
-            this.btnDelete.MouseLeave += new System.EventHandler(this.btnDelete_MouseLeave);
+            this.btnDelete.MouseEnter += new System.EventHandler(this.btnDelete_MouseEnter_1);
+            this.btnDelete.MouseLeave += new System.EventHandler(this.btnDelete_MouseLeave_1);
             // 
             // panel1
             // 
@@ -126,7 +128,6 @@
             this.label7.Size = new System.Drawing.Size(560, 36);
             this.label7.TabIndex = 0;
             this.label7.Text = "Enter roll no. of the student to be deleted:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -138,7 +139,6 @@
             this.label8.Size = new System.Drawing.Size(322, 29);
             this.label8.TabIndex = 27;
             this.label8.Text = "Confirm the following details:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtPhoneNo
             // 
@@ -203,7 +203,6 @@
             this.cbBatch.Name = "cbBatch";
             this.cbBatch.Size = new System.Drawing.Size(196, 46);
             this.cbBatch.TabIndex = 33;
-            this.cbBatch.SelectedIndexChanged += new System.EventHandler(this.cbBatch_SelectedIndexChanged);
             // 
             // txtRollNo
             // 
@@ -286,7 +285,6 @@
             this.Name = "DeleteStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteStudent";
-            this.Load += new System.EventHandler(this.DeleteStudent_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

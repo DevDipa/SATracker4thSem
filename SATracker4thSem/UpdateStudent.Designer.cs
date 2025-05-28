@@ -79,7 +79,6 @@
             this.label7.Size = new System.Drawing.Size(571, 36);
             this.label7.TabIndex = 0;
             this.label7.Text = "Enter roll no. of the student to be updated:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // btnExit
             // 
@@ -96,6 +95,8 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseEnter += new System.EventHandler(this.btnExit_MouseEnter);
+            this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
             // 
             // btnUpdate
             // 
@@ -112,8 +113,8 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            this.btnUpdate.MouseEnter += new System.EventHandler(this.btnUpdate_MouseEnter);
-            this.btnUpdate.MouseLeave += new System.EventHandler(this.btnUpdate_MouseLeave);
+            this.btnUpdate.MouseEnter += new System.EventHandler(this.btnUpdate_MouseEnter_1);
+            this.btnUpdate.MouseLeave += new System.EventHandler(this.btnUpdate_MouseLeave_1);
             // 
             // label1
             // 
@@ -126,7 +127,6 @@
             this.label1.Size = new System.Drawing.Size(257, 38);
             this.label1.TabIndex = 28;
             this.label1.Text = "Update Student";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label8
             // 

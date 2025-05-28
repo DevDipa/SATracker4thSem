@@ -33,11 +33,6 @@ namespace SATracker4thSem
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnShow_Click(object sender, EventArgs e)
         {
             if (txtNewPassword.PasswordChar == '*')
@@ -85,13 +80,14 @@ namespace SATracker4thSem
             }
 
 
-            // Password strength (min 6 chars, 1 uppercase, 1 digit)
+            // Password strength (min 6 chars, 1 uppercase, 1 digit, 1 special character)
             string passwordPattern = @"^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!#@+-_]).{6,}$";
             if (!Regex.IsMatch(newPassword, passwordPattern))
             {
-                MessageBox.Show("Password must be at least 6 characters and include 1 uppercase letter and 1 number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Password must be at least 6 characters and include 1 uppercase letter and 1 number and 1 special character.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
 
             // Password match check
             if (newPassword != confirmPassword)

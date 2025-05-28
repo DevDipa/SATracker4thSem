@@ -129,12 +129,22 @@ namespace SATracker4thSem
 
         private void btnSave_MouseEnter(object sender, EventArgs e)
         {
-            btnExit.BackColor = Color.MediumPurple;
+            btnSave.BackColor = Color.MediumPurple;
         }
 
         private void btnSave_MouseLeave(object sender, EventArgs e)
         {
-            btnExit.BackColor = Color.FromArgb(110, 89, 165);
+            btnSave.BackColor = Color.FromArgb(110, 89, 165);
+        }
+
+        private void btnExit_MouseEnter(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.MediumPurple;
+        }
+
+        private void btnExit_MouseLeave(object sender, EventArgs e)
+        {
+            btnExit.BackColor = SystemColors.ButtonHighlight;
         }
     }
 }

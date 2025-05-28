@@ -74,11 +74,6 @@ namespace SATracker4thSem
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnSaveAttendance_Click(object sender, EventArgs e)
         {
             PrintDocument printDoc = new PrintDocument();
@@ -94,16 +89,6 @@ namespace SATracker4thSem
             Bitmap bm = new Bitmap(dataGridView1.Width, dataGridView1.Height);
             dataGridView1.DrawToBitmap(bm, new Rectangle(0, 0, dataGridView1.Width, dataGridView1.Height));
             e.Graphics.DrawImage(bm, 0, 0);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ViewAttendance_Load(object sender, EventArgs e)
@@ -139,27 +124,22 @@ namespace SATracker4thSem
             }
         }
 
-        private void cbBatch_MouseEnter(object sender, EventArgs e)
+        private void btnUpdateDetails_MouseEnter_1(object sender, EventArgs e)
         {
-            cbBatch.BackColor = Color.MediumPurple;
+            btnUpdateDetails.BackColor = Color.MediumPurple;
         }
 
-        private void btnUpdateDetails_MouseEnter(object sender, EventArgs e)
+        private void btnUpdateDetails_MouseLeave_1(object sender, EventArgs e)
         {
-            btnPrintAttendance.BackColor = Color.MediumPurple;
+            btnUpdateDetails.BackColor = Color.FromArgb(110, 89, 165);
         }
 
-        private void btnUpdateDetails_MouseLeave(object sender, EventArgs e)
-        {
-            btnPrintAttendance.BackColor = Color.FromArgb(110, 89, 165);
-        }
-
-        private void btnPrintAttendance_MouseEnter(object sender, EventArgs e)
+        private void btnPrintAttendance_MouseEnter_1(object sender, EventArgs e)
         {
             btnPrintAttendance.BackColor = Color.MediumPurple;
         }
 
-        private void btnPrintAttendance_MouseLeave(object sender, EventArgs e)
+        private void btnPrintAttendance_MouseLeave_1(object sender, EventArgs e)
         {
             btnPrintAttendance.BackColor = Color.FromArgb(110, 89, 165);
         }

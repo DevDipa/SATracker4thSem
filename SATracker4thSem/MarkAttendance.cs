@@ -43,22 +43,6 @@ namespace SATracker4thSem
 
         }
 
-        private void MarkAttendance_Load(object sender, EventArgs e)
-        {
-            dateTimePicker.ValueChanged += (s, p) =>
-            {
-                if (dateTimePicker.Value.DayOfWeek == DayOfWeek.Saturday)
-                {
-                    MessageBox.Show("Saturday is a holiday. Please select a working day.");
-
-                    dateTimePicker.Value = dateTimePicker.Value.AddDays(1);
-                }
-            };
-
-
-
-        }
-
         private void InitializeGrid()
         {
             dataGridView1.Columns.Clear();
@@ -153,6 +137,11 @@ namespace SATracker4thSem
 
             DateTime selectedDate = dateTimePicker.Value.Date;
 
+            if (selectedDate > DateTime.Today)
+            {
+                MessageBox.Show("You cannot mark attendance for future dates.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             string batch = cbBatch.SelectedItem?.ToString();
 
@@ -161,6 +150,21 @@ namespace SATracker4thSem
                 MessageBox.Show("Please select a batch.");
                 return;
             }
+
+            // Validate that all students have their attendance status marked
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    var status = row.Cells["Status"].Value?.ToString();
+                    if (string.IsNullOrWhiteSpace(status))
+                    {
+                        MessageBox.Show("Please mark attendance for all students before saving.", "Incomplete Attendance", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Stop saving
+                    }
+                }
+            }
+
 
             try
             {
@@ -262,6 +266,12 @@ namespace SATracker4thSem
 
             DateTime selectedDate = dateTimePicker.Value.Date;
 
+            if (selectedDate > DateTime.Today)
+            {
+                MessageBox.Show("You cannot mark attendance for future dates.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
 
             if (selectedDate.DayOfWeek == DayOfWeek.Saturday)
             {
@@ -304,14 +314,13 @@ namespace SATracker4thSem
 
         private void btnSaveAttendance_MouseLeave(object sender, EventArgs e)
         {
-            btnSaveAttendance.BackColor = Color.FromArgb(110, 89, 165); 
+            btnSaveAttendance.BackColor = Color.FromArgb(110, 89, 165);
         }
     }
 }
 
-        
-        
 
 
-    
+
+
 

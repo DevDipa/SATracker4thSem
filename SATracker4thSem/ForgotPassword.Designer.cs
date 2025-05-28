@@ -144,7 +144,6 @@
             this.label6.Size = new System.Drawing.Size(210, 29);
             this.label6.TabIndex = 27;
             this.label6.Text = "Confirm Password";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 

@@ -14,11 +14,6 @@ namespace SATracker4thSem
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FetchAttendance()
         {
             if (string.IsNullOrWhiteSpace(cbBatch.Text) || string.IsNullOrWhiteSpace(txtMyRollNo.Text))
@@ -93,11 +88,6 @@ namespace SATracker4thSem
 
         private void btnLoadAttendance_Click(object sender, EventArgs e)
         {
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)

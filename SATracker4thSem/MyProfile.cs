@@ -21,20 +21,9 @@ namespace SATracker4thSem
         }
 
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtMyRollNo_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void txtMyRollNo_Leave(object sender, EventArgs e)
-        {
-
-
         }
 
         private void btnView_Click(object sender, EventArgs e)

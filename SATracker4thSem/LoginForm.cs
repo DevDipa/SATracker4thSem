@@ -50,7 +50,6 @@ namespace SATracker4thSem
         }
 
         //Password show/hide logic
-
         private void btnShow_Click(object sender, EventArgs e)
         {
             if(txtPassword.PasswordChar=='*')
@@ -86,24 +85,8 @@ namespace SATracker4thSem
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void btnExit_MouseEnter(object sender, EventArgs e)
-        {
-            btnExit.BackColor = Color.Firebrick;
-            btnExit.ForeColor = SystemColors.Control;
-        }
-
-        private void btnExit_MouseLeave(object sender, EventArgs e)
-        {
-
-            btnExit.BackColor = Color.FromArgb(110, 89, 165); 
-            btnExit.ForeColor = SystemColors.Control;
-        }
-
+        //Login button logic
         private void btnLogin_MouseEnter(object sender, EventArgs e)
         {
             btnLogin.BackColor = Color.MediumPurple;
@@ -114,6 +97,7 @@ namespace SATracker4thSem
             btnLogin.BackColor = Color.FromArgb(110, 89, 165);
         }
 
+        //Exit button logic
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -129,6 +113,7 @@ namespace SATracker4thSem
             btnExit.BackColor = Color.FromArgb(110, 89, 165);
         }
 
+        //Minimize button logic
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

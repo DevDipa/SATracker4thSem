@@ -21,27 +21,13 @@ namespace SATracker4thSem
             childForm.Show();
         }
 
-        //To store the username of the teacher
-        private string _username; 
+        
         public TeacherDashboard(string username)
         {
             InitializeComponent();
-            _username = username;
-            txtTeacher.Text = _username;
+           txtTeacher.Text = username;
         }
         
-        private void button1_Click(object sender, EventArgs e)
-        {
-            pbLogo.SendToBack();
-            lblSlogan.SendToBack();
-            OpenChildForm(new MarkAttendance());
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
@@ -110,11 +96,6 @@ namespace SATracker4thSem
             OpenChildForm(new Dashboard());
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -130,16 +111,6 @@ namespace SATracker4thSem
         {
             btnExit.BackColor = Color.FromArgb(110, 89, 165) ;
             btnExit.ForeColor = SystemColors.Control;
-        }
-
-        private void btnDashboard_MouseHover(object sender, EventArgs e)
-        {
-            btnExit.BackColor = Color.MediumPurple;
-        }
-
-        private void btnMarkAttendance_MouseEnter(object sender, EventArgs e)
-        {
-            btnExit.BackColor = Color.MediumPurple;
         }
 
         private void btnDashboard_MouseEnter(object sender, EventArgs e)
@@ -235,6 +206,13 @@ namespace SATracker4thSem
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMarkAttendance_Click(object sender, EventArgs e)
+        {
+            pbLogo.SendToBack();
+            lblSlogan.SendToBack();
+            OpenChildForm(new MarkAttendance());
         }
     }
 }
